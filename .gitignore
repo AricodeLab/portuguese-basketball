@@ -77,10 +77,11 @@ typings/
 
 # Next.js build output
 .next
-
+build/
 # Nuxt.js build / generate output
 .nuxt
-dist
+dist/
+dist-electron
 
 # Gatsby files
 .cache/
