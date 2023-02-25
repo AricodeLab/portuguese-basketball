@@ -1,46 +1,51 @@
 {
-  "name": "portuguese-basketball",
-  "version": "2.1.0",
-  "main": "dist-electron/main/index.js",
-  "description": "Electron Vite React boilerplate.",
-  "author": "草鞋没号 <308487730@qq.com>",
-  "license": "MIT",
-  "private": true,
-  "debug": {
-    "env": {
-      "VITE_DEV_SERVER_URL": "http://127.0.0.1:7777/"
-    }
-  },
+  "name": "basketball-app",
+  "version": "1.0.0",
+  "main": "./out/main/index.js",
+  "author": "erwinsystems.com",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build && electron-builder -wl",
-    "preview": "vite preview",
-    "pree2e": "vite build --mode=test",
-    "e2e": "playwright test"
-  },
-  "devDependencies": {
-    "@playwright/test": "^1.31.0",
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11",
-    "@vitejs/plugin-react": "^3.1.0",
-    "autoprefixer": "^10.4.13",
-    "electron": "^23.1.1",
-    "electron-builder": "^23.6.0",
-    "postcss": "^8.4.21",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "sass": "^1.58.3",
-    "tailwindcss": "^3.2.7",
-    "typescript": "^4.9.5",
-    "vite": "^4.1.4",
-    "vite-electron-plugin": "^0.8.2",
-    "vite-plugin-electron": "^0.11.1",
-    "vite-plugin-electron-renderer": "^0.12.1"
-  },
-  "engines": {
-    "node": "^14.18.0 || >=16.0.0"
+    "format": "prettier --write .",
+    "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
+    "typecheck:node": "tsc --noEmit -p tsconfig.node.json --composite false",
+    "typecheck:web": "tsc --noEmit -p tsconfig.web.json --composite false",
+    "typecheck": "npm run typecheck:node && npm run typecheck:web",
+    "start": "electron-vite preview",
+    "dev": "electron-vite dev",
+    "build": "npm run typecheck && electron-vite build",
+    "postinstall": "electron-builder install-app-deps",
+    "build:win": "npm run build && electron-builder --win --config",
+    "build:mac": "electron-vite build && electron-builder --mac --config",
+    "build:linux": "electron-vite build && electron-builder --linux --config"
   },
   "dependencies": {
-    "vite-tsconfig-paths": "^4.0.5"
+    "@electron-toolkit/preload": "^1.0.3",
+    "@electron-toolkit/utils": "^1.0.2",
+    "electron-updater": "^5.3.0",
+    "styled-components": "^5.3.6"
+  },
+  "devDependencies": {
+    "@electron-toolkit/tsconfig": "^1.0.1",
+    "@electron/notarize": "^1.2.3",
+    "@types/node": "16.18.11",
+    "@types/react": "18.0.26",
+    "@types/react-dom": "18.0.10",
+    "@typescript-eslint/eslint-plugin": "^5.48.0",
+    "@typescript-eslint/parser": "^5.48.0",
+    "@vitejs/plugin-react": "^3.0.1",
+    "autoprefixer": "^10.4.13",
+    "electron": "^21.3.3",
+    "electron-builder": "^23.6.0",
+    "electron-vite": "^1.0.17",
+    "eslint": "^8.31.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.11",
+    "postcss": "^8.4.21",
+    "prettier": "^2.8.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.2.7",
+    "typescript": "^4.9.4",
+    "vite": "^4.0.4"
   }
 }

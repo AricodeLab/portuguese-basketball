@@ -1,7 +1,34 @@
-# portuguese-basketball
+# teste
 
-Projeto basquete na europa e muitos euro
+An Electron application with React and TypeScript
 
-## Links para Build do exe:
+## Recommended IDE Setup
 
-- https://www.electron.build/multi-platform-build#to-build-app-for-windows-on-linux
+- [VSCode](https://code.visualstudio.com/) + [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) + [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+
+## Project Setup
+
+### Install
+
+```bash
+$ npm install
+```
+
+### Development
+
+```bash
+$ npm run dev
+```
+
+### Build
+
+```bash
+# For windows
+$ npm run build:win
+
+# For macOS
+$ npm run build:mac
+
+# For Linux
+$ npm run build:linux
+```
