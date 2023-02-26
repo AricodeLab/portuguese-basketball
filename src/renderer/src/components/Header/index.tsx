@@ -1,19 +1,16 @@
-import React, { useCallback, useMemo, memo } from 'react'
-import { FiX, FiMinus, FiMaximize2, FiSquare } from 'react-icons/fi'
+import React, { useCallback, memo } from 'react'
+import { FiX, FiMinus, FiSquare } from 'react-icons/fi'
 
 import { Container, WindowActions, DefaultActionButton } from './styles'
 
-// close app
-
 const Header: React.FC = () => {
-  // implementar as funcoes
   const handleCloseWindow = useCallback(() => {}, [])
   const handleMinimize = useCallback(() => {}, [])
   const handleMaximize = useCallback(() => {}, [])
 
   return (
     <Container>
-      <strong>Rocket Redis</strong>
+      <strong>Vasco Basket</strong>
 
       <WindowActions position="right">
         <DefaultActionButton onClick={handleMinimize}>

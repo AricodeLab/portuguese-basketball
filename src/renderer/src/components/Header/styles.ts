@@ -1,4 +1,4 @@
-import { defaultThemeI } from './../../styles/theme'
+import { defaultThemeI } from '../../styles/theme'
 import styled, { css } from 'styled-components'
 
 export const Container = styled.header`
