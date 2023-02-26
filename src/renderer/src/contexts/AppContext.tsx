@@ -1,5 +1,5 @@
 import React, { createContext } from 'react'
-import { ThemeContextProvider } from './theme_context /ThemeContext'
+import { ThemeContextProvider } from './theme_context/ThemeContext'
 
 export const AppContext = createContext({})
 

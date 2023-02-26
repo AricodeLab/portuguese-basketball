@@ -1,5 +1,5 @@
 import BasketIcon from './assets/icon.svg'
-import Button from './Componentss/Button'
+import Button from './Components/Button'
 
 function App(): JSX.Element {
   return (
