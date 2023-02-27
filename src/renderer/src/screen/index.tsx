@@ -10,6 +10,7 @@ const Screen: React.FC = () => {
       <Content>
         <CurrentConnection>
           <App />
+          <h1>aaa</h1>
         </CurrentConnection>
       </Content>
     </Container>

@@ -1,9 +1,9 @@
 import styled from 'styled-components'
-
+import { defaultThemeI } from '../styles/theme'
 export const Container = styled.div`
   width: 100vw;
   height: 100vh;
-  background: ${(props) => props.theme.backgrounds.pene};
+  background: ${(props: defaultThemeI): string => props.theme.backgrounds.light};
   overflow: hidden;
   display: flex;
   flex-direction: column;

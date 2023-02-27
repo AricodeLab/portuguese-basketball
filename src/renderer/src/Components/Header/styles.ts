@@ -10,11 +10,11 @@ export const Container = styled.header`
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 1px solid ${(props: defaultThemeI): unknown => props.theme.backgrounds.lightest};
+  border-bottom: 1px solid ${(props: defaultThemeI): unknown => props.theme.backgrounds.light};
   strong {
     font-size: 13px;
     font-weight: 400;
-    color: ${(props: defaultThemeI): unknown => props.theme.colors.black};
+    color: ${(props: defaultThemeI): unknown => props.theme.colors.white};
   }
 `
 

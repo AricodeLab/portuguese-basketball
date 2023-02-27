@@ -3,49 +3,28 @@ import { shade } from 'polished'
 export type defaultThemeI = {
   theme: {
     colors: {
+      brown: '#A46A37'
+      whitegray: '#E4D5C2'
       white: '#E1E1E6'
-      grey: string
-      opaque: '#41414D'
-      purple: '#6633cc'
-      purpleDark: '#5A4B81'
-      green: '#67e480'
-      orange: '#E89E64'
-      pink: '#FF79C6'
-      cyan: '#78D1E1'
       red: '#E96379'
-      yellow: '#e7de79'
-      black: ''
+      grey: string
     }
     backgrounds: {
-      pene: '#fffff'
-      lightest: '#252131'
-      lighter: '#201B2D'
-      dark: '#191622'
-      darker: '#15121E'
-      darkest: '#13111B'
+      light: '#FFFFFF'
     }
   }
 }
 export const defaultTheme = {
   colors: {
+    brown: '#A46A37',
+    whitegray: '#E4D5C2',
     white: '#E1E1E6',
-    grey: shade(0.3, '#E1E1E6'),
-    opaque: '#41414D',
-    purple: '#6633cc',
-    purpleDark: '#5A4B81',
-    green: '#67e480',
-    orange: '#E89E64',
-    pink: '#FF79C6',
-    cyan: '#78D1E1',
     red: '#E96379',
-    yellow: '#e7de79'
+    grey: shade(0.3, '#E1E1E6'),
+    penis: shade(2, '#CAAF8D'),
+    orange: '#D18421'
   },
   backgrounds: {
-    pene: '#fffff',
-    lightest: '#252131',
-    lighter: '#201B2D',
-    dark: '#191622',
-    darker: '#15121E',
-    darkest: '#13111B'
+    light: '#FFFFFF'
   }
 }
