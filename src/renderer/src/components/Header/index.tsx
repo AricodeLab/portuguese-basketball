@@ -3,7 +3,7 @@ import { FiX, FiMinus, FiSquare } from 'react-icons/fi'
 
 import { Container, WindowActions, DefaultActionButton } from './styles'
 
-const Header: React.FC = () => {
+function Header(): JSX.Element {
   const handleCloseWindow = useCallback(() => {}, [])
   const handleMinimize = useCallback(() => {}, [])
   const handleMaximize = useCallback(() => {}, [])

@@ -6,8 +6,10 @@ const ContentContainer = styled.main`
   max-width: 100vw;
   margin: auto;
   height: auto;
+  background-color: aqua;
 `
 
-export default ({ children }: { children: React.ReactNode }): JSX.Element => {
-  return <ContentContainer>{children}</ContentContainer>
+const MainContainer = ({children }: Props) => {
+  return <>{children}</>
 }
+export default MainContainer
