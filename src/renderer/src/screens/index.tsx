@@ -2,8 +2,8 @@ import React from 'react'
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import '../assets/index.css'
-import Header from '../Components/header'
-import Navbar from '../Components/navbar'
+import Header from '../components/Header/index'
+import Navbar from '../components/navbar'
 import { Container, Content, CurrentConnection } from './styles'
 import Panel from '@renderer/pages/painel'
 
