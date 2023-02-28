@@ -3,6 +3,7 @@ import React, { useCallback, memo } from 'react'
 import { FiX, FiMinus, FiSquare } from 'react-icons/fi'
 import { Container, WindowActions, DefaultActionButton } from './styles'
 
+
 const Header: React.FC = () => {
   const handleCloseWindow = useCallback(() => {
     window.close()
@@ -14,7 +15,7 @@ const Header: React.FC = () => {
     <Container>
       <strong>Score Board - Sports</strong>
 
-      <WindowActions position="right">
+      <WindowActions position={"right"}>
         <DefaultActionButton onClick={handleMinimize}>
           <FiMinus />
         </DefaultActionButton>

@@ -37,8 +37,9 @@ export const WindowActions = styled.div<WindowActionsProps>`
         `
       : css`
           right: 16px;
-        `};
-  ${(props: { shouldShowIconsOnHover: string }): s =>
+        `
+  };
+  ${(props: { shouldShowIconsOnHover: string }): string  =>
     props.shouldShowIconsOnHover &&
     css`
       &:hover svg {

@@ -1,32 +1,35 @@
 import Button from '@renderer/components/Button'
 import Container from '@renderer/components/Container'
-import { Content, Div, Row, Span, Triangle } from './styles'
+import { Content, Div, Row, Span, Triangle,Texto } from './styles'
+import React, { useState, memo } from 'react'
 function Panel(): JSX.Element {
+  const [tempoJogo, setTempoJogo] = useState("Crescente")
+
   return (
     <Container>
       <Content>
         <Row>
           <Div flexDirection="column">
-            <Div height="auto" width="auto" flexDirection="row" gap="59px">
-              <h1>Tempo de jogo</h1>
+            <Div height="auto" width="auto" flexDirection="row" gap="59px" onClick={()=>tempoJogo == "Crescente"?setTempoJogo("Decrecente"):setTempoJogo("Crescente")}>
+              <Texto>Tempo de jogo</Texto>
               <Span width="193px" height="51px" flexDirection="row" gap="13px">
-                <h2>Crescente</h2>
-                <Triangle bgColor="#6C3D18" />
+                <h2>{tempoJogo}</h2>
+                <Triangle bgColor="#6C3D18" increment={tempoJogo == "Crescente"}/>
               </Span>
             </Div>
             <Div height="auto" width="auto">
-              <h1>Tempo de jogo</h1>
+              <Texto>Tempo de jogo</Texto>
             </Div>
             <Div height="auto" width="auto">
-              <h1>Desconto de tempo 1</h1>
+              <Texto>Desconto de tempo 1</Texto>
             </Div>
             <Div height="auto" width="auto">
-              <h1>Desconto de tempo 2</h1>
+              <Texto>Desconto de tempo 2</Texto>
             </Div>
           </Div>
           <Div width="auto" flexDirection="column">
             <Div>
-              <h1>Mostrar no ecrã</h1>
+              <Texto>Mostrar no ecrã</Texto>
             </Div>
             <Div>
               <h1>Tempo de ataque </h1>
