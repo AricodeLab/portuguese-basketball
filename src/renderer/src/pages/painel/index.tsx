@@ -1,9 +1,10 @@
 import Button from '@renderer/components/Button'
-import { ContainerMain, Div, Row, Span, Triangle } from './styles'
+import Container from '@renderer/components/Container'
+import { Content, Div, Row, Span, Triangle } from './styles'
 function Panel(): JSX.Element {
   return (
-    <>
-      <ContainerMain>
+    <Container>
+      <Content>
         <Row>
           <Div flexDirection="column">
             <Div height="auto" width="auto" flexDirection="row" gap="59px">
@@ -36,8 +37,8 @@ function Panel(): JSX.Element {
           <Button isprimaly>Salvar</Button>
           <Button isprimaly>Atualizar</Button>
         </Div>
-      </ContainerMain>
-    </>
+      </Content>
+    </Container>
   )
 }
 

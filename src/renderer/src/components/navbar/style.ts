@@ -10,7 +10,7 @@ export const Container = styled.div.attrs({ className: 'navigation' })`
   padding: 1rem;
   text-align: center;
   align-items: center;
-  max-width: 1000px;
+  max-width: 100vw;
   align-self: center;
 `
 

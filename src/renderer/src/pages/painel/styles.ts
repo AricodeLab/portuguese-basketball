@@ -3,8 +3,8 @@ import { HTMLAttributes } from 'react'
 
 import styled, { css } from 'styled-components'
 
-export const ContainerMain = styled.main`
-  width: 100vw;
+export const Content = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
