@@ -1,4 +1,3 @@
-import { defaultThemeI } from '../../theme'
 import styled, { css } from 'styled-components'
 
 export const Container = styled.header`
@@ -10,11 +9,13 @@ export const Container = styled.header`
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 1px solid ${(props: defaultThemeI): unknown => props.theme.backgrounds.light};
+  border-bottom: 1px solid ${(props): string => props.theme.backgrounds.light};
   strong {
-    font-size: 13px;
+    font-size: 15px;
+    font-family: sans-serif;
     font-weight: 400;
-    color: ${(props: defaultThemeI): unknown => props.theme.colors.white};
+    letter-spacing: 2px;
+    color: ${(props): string => props.theme.colors.black};
   }
 `
 
@@ -29,7 +30,7 @@ export const WindowActions = styled.div<WindowActionsProps>`
   height: 100%;
   display: flex;
   align-items: center;
-  ${(props: { position: string }): unknown =>
+  ${(props: { position: string }): string =>
     props.position === 'left'
       ? css`
           left: 16px;
@@ -37,7 +38,7 @@ export const WindowActions = styled.div<WindowActionsProps>`
       : css`
           right: 16px;
         `};
-  ${(props: { shouldShowIconsOnHover: string }): unknown =>
+  ${(props: { shouldShowIconsOnHover: string }): s =>
     props.shouldShowIconsOnHover &&
     css`
       &:hover svg {
@@ -53,12 +54,12 @@ export const DefaultActionButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${(props: defaultThemeI): unknown => props.theme.colors.grey};
+  color: ${(props): string => props.theme.colors.grey};
   & + button {
     margin-left: 12px;
   }
   &:hover svg {
-    color: ${(props: defaultThemeI): unknown => props.theme.colors.red};
+    color: ${(props): string => props.theme.colors.red};
   }
   &:active {
     opacity: 0.6;
