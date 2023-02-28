@@ -1,16 +1,18 @@
+/* eslint-disable prettier/prettier */
 import React, { useCallback, memo } from 'react'
 import { FiX, FiMinus, FiSquare } from 'react-icons/fi'
-
 import { Container, WindowActions, DefaultActionButton } from './styles'
 
 const Header: React.FC = () => {
-  const handleCloseWindow = useCallback(() => {}, [])
+  const handleCloseWindow = useCallback(() => {
+    window.close()
+  }, [])
   const handleMinimize = useCallback(() => {}, [])
   const handleMaximize = useCallback(() => {}, [])
 
   return (
     <Container>
-      <strong>Vasco Basket</strong>
+      <strong>Score Board - Sports</strong>
 
       <WindowActions position="right">
         <DefaultActionButton onClick={handleMinimize}>
