@@ -1,0 +1,20 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+import styled from 'styled-components'
+
+type Props = {
+  primaly: boolean
+}
+export const CustonButton = styled.button<Props>`
+  background: ${(props) =>
+    props.primaly ? props.theme.colors.brown : props.theme.colors.whitegray};
+  border-radius: 35px;
+  border: 0;
+  padding: 0.2em 1.7em;
+  margin-left: 15px;
+  margin-top: 3px;
+  color: ${(props) => (props.primaly ? props.theme.colors.white : props.theme.colors.black)};
+`
+
+export const CustomText = styled.h1`
+  font-size: 100%;
+`

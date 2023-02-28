@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-import { config, schema } from '../styles/config'
+import { config, schema } from '../store/config'
 
 type Schema = typeof schema
 

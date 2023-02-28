@@ -7,7 +7,7 @@ function createWindow(): void {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     width: 850,
-    height: 550,
+    height: 600,
     show: false,
     frame: false,
     autoHideMenuBar: true,
@@ -62,6 +62,7 @@ app.whenReady().then(() => {
   app.on('browser-window-created', (_, window) => {
     optimizer.watchWindowShortcuts(window)
   })
+  
 
   createWindow()
 
