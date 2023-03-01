@@ -9,6 +9,7 @@ import Panel from '@renderer/pages/painel'
 import FootBar from '@renderer/components/Footbar'
 import Equipas from '@renderer/pages/equipas'
 import Monitores from '@renderer/pages/monitores'
+import Midias from '@renderer/pages/midias'
 
 const Screen: React.FC = () => {
   return (
@@ -22,6 +23,7 @@ const Screen: React.FC = () => {
               <Route path="/Painel" element={<Panel />} />
               <Route path="/Equipas" element={<Equipas />} />
               <Route path="/Monitores" element={<Monitores />} />
+              <Route path="/Video/foto" element={<Midias />} />
             </Routes>
           </CurrentConnection>
         </Content>

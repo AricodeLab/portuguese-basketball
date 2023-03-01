@@ -23,12 +23,12 @@ const ButtonStyled = styled(Button).attrs({ type: 3 })``
 
 function Box({ children, target, width, height }: BoxContentProps): JSX.Element {
   return (
-    <>
+    <div>
       <ButtonStyled>{target}</ButtonStyled>
       <BoxContent width={width} height={height}>
         {children}
       </BoxContent>
-    </>
+    </div>
   )
 }
 
