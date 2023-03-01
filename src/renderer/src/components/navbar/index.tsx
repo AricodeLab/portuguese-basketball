@@ -10,6 +10,7 @@ type pagesI = {
 const pages: pagesI[] = [
   { name: 'Painel' },
   { name: 'Equipas' },
+  { name: 'Monitores' },
   { name: 'Video/foto' },
   { name: 'Shortcuts' },
   { name: 'Cores' },
