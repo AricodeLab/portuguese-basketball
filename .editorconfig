@@ -1,6 +1,7 @@
 root = true
 
 [*]
+ELECTRON_ENABLE_LOGGING=1
 charset = utf-8
 indent_style = space
 indent_size = 2

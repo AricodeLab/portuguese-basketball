@@ -93,3 +93,11 @@ export const Triangle = styled.div<TriangleProps>`
       border-bottom-color: red;
     `}
 `
+
+export const Texto = styled.h2`
+  height: 25px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+`
