@@ -28,7 +28,7 @@ function Navbar(): JSX.Element {
         {pages.map((page: pagesI, n) => {
           return (
             <Link key={n} to={page.name}>
-              <Button isprimaly={pathname.includes(page.name)}>{page.name}</Button>
+              <Button type={pathname.includes(page.name) ? 1 : 2}>{page.name}</Button>
             </Link>
           )
         })}

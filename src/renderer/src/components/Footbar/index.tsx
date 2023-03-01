@@ -5,8 +5,8 @@ const FootBar = (): JSX.Element => {
   return (
     <footer>
       <Div>
-        <Button isprimaly>Salvar</Button>
-        <Button isprimaly>Atualizar</Button>
+        <Button type={1}>Salvar</Button>
+        <Button type={1}>Atualizar</Button>
       </Div>
     </footer>
   )

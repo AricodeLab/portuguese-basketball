@@ -8,7 +8,9 @@ const Header: React.FC = () => {
   const handleCloseWindow = useCallback(() => {
     window.close()
   }, [])
-  const handleMinimize = useCallback(() => {}, [])
+  const handleMinimize = useCallback(() => {
+
+  }, [])
   const handleMaximize = useCallback(() => {}, [])
 
   return (
