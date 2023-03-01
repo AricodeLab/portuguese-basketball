@@ -1,7 +1,7 @@
 import { CustomText, CustonButton } from './style'
 
 type Props = {
-  children: string
+  children?: string
   type: number
 }
 

@@ -1,4 +1,4 @@
-import Container from '@renderer/Components/Container'
+import Container from '@renderer/components/Container'
 import { Content, Div, Row, Span, Triangle, Texto } from './styles'
 import React, { useState, memo } from 'react'
 

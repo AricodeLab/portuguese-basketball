@@ -1,9 +1,12 @@
 import React, { HTMLAttributes } from 'react'
 import styled from 'styled-components'
+import Button from '../Button/index'
 
 interface BoxContentProps extends HTMLAttributes<HTMLDivElement> {
   width?: string
   height?: string
+  children: React.ReactNode
+  target?: string
 }
 const BoxContent = styled.div<BoxContentProps>`
   display: flex;
@@ -16,8 +19,17 @@ const BoxContent = styled.div<BoxContentProps>`
   justify-content: center;
 `
 
-function Box({ children, target }: { children: React.ReactNode; target?: string }): JSX.Element {
-  return <BoxContent>{children}</BoxContent>
+const ButtonStyled = styled(Button).attrs({ type: 3 })``
+
+function Box({ children, target, width, height }: BoxContentProps): JSX.Element {
+  return (
+    <>
+      <ButtonStyled>{target}</ButtonStyled>
+      <BoxContent width={width} height={height}>
+        {children}
+      </BoxContent>
+    </>
+  )
 }
 
 export default Box
