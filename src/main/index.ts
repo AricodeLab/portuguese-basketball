@@ -6,16 +6,15 @@ import icon from '../../resources/icon.png?asset'
 function createWindow(): void {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 850,
-    height: 600,
+    width: 950,
+    height: 750,
     show: false,
     frame: false,
     autoHideMenuBar: true,
     ...(process.platform === 'linux' ? { icon } : { icon }),
     webPreferences: {
       nodeIntegration: true,
-      preload: join(__dirname, '../preload/index.js'),
-      sandbox: false
+      preload: join(__dirname, '../preload/index.js')
     }
   })
 
@@ -62,7 +61,6 @@ app.whenReady().then(() => {
   app.on('browser-window-created', (_, window) => {
     optimizer.watchWindowShortcuts(window)
   })
-  
 
   createWindow()
 

@@ -1,4 +1,3 @@
-import Button from '@renderer/Components/Button'
 import Container from '@renderer/Components/Container'
 import { Content, Div, Row, Span, Triangle, Texto } from './styles'
 import React, { useState, memo } from 'react'
