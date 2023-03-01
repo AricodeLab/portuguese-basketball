@@ -11,15 +11,18 @@ export const Container = styled.header`
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid ${(props) => props.theme.backgrounds.light};
+
   strong {
-    font-size: 13px;
+    font-size: 15px;
+    font-family: sans-serif;
     font-weight: 400;
-    color: ${(props) => props.theme.colors.white};
+
+    letter-spacing: 2px;
+    color: ${(props) => props.theme.colors.black};
   }
 `
 
 interface WindowActionsProps {
-  children: Element[],
   position: 'left' | 'right'
   shouldShowIconsOnHover?: boolean
 }
@@ -30,6 +33,7 @@ export const WindowActions = styled.div<WindowActionsProps>`
   height: 100%;
   display: flex;
   align-items: center;
+
   ${(props) =>
     props.position === 'left'
       ? css`
@@ -47,8 +51,6 @@ export const WindowActions = styled.div<WindowActionsProps>`
     `}
 `
 
-+--
-
 export const DefaultActionButton = styled.button`
   background: transparent;
   -webkit-app-region: no-drag;
@@ -56,12 +58,16 @@ export const DefaultActionButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+
   color: ${(props) => props.theme.colors.grey};
+
   & + button {
     margin-left: 12px;
   }
   &:hover svg {
     color: ${(props) => props.theme.colors.red};
+
+    color: ${(props): string => props.theme.colors.red};
   }
   &:active {
     opacity: 0.6;
@@ -70,5 +76,3 @@ export const DefaultActionButton = styled.button`
     outline: 0;
   }
 `
-
-

@@ -1,8 +1,6 @@
+/* eslint-disable @typescript-eslint/no-empty-interface */
 import { ElectronAPI } from '@electron-toolkit/preload'
 
 declare global {
-  interface Window {
-    electron: ElectronAPI
-    api: unknown
-  }
+  interface Window extends ElectronAPI {}
 }

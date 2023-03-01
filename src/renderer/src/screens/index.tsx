@@ -6,6 +6,7 @@ import Header from '../Components/Header/index'
 import Navbar from '../Components/Navbar'
 import { Container, Content, CurrentConnection } from './styles'
 import Panel from '@renderer/pages/painel'
+import FootBar from '@renderer/Components/Footbar'
 
 const Screen: React.FC = () => {
   return (
@@ -17,9 +18,11 @@ const Screen: React.FC = () => {
           <CurrentConnection>
             <Routes>
               <Route path="/Painel" element={<Panel />} />
+              <Route path="/Equipas" element={<Panel />} />
             </Routes>
           </CurrentConnection>
         </Content>
+        <FootBar />
       </Router>
     </Container>
   )
