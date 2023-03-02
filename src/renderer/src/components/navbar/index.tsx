@@ -16,7 +16,6 @@ const pages: pagesI[] = [
   { name: 'Cores' },
   { name: 'Sons' },
   { name: 'Banner-color' },
-  { name: 'Texto' }
 ]
 
 function Navbar(): JSX.Element {

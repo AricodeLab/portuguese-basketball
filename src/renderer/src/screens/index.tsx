@@ -12,6 +12,8 @@ import Monitores from '@renderer/pages/monitores'
 import Midias from '@renderer/pages/midias'
 import Shortcuts from '@renderer/pages/shortcuts'
 import Cores from '@renderer/pages/cores'
+import BannerColor from '@renderer/pages/banner-color'
+import Sons from '@renderer/pages/sons'
 
 const Screen: React.FC = () => {
   return (
@@ -28,6 +30,8 @@ const Screen: React.FC = () => {
               <Route path="/Video/foto" element={<Midias />} />
               <Route path="/Shortcuts" element={<Shortcuts />} />
               <Route path="/Cores" element={<Cores />} />
+              <Route path="/Sons" element={<Sons />} />
+              <Route path="/Banner-color" element={<BannerColor />} />
             </Routes>
           </CurrentConnection>
         </Content>

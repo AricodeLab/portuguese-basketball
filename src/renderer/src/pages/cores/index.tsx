@@ -5,9 +5,7 @@ import Box from '@renderer/components/Box'
 function Cores(): JSX.Element {
   return (
     <Container>
-      <Box width="1400px" height="600px" target={'Alterar cores'}>
-        <h2>bah</h2>
-      </Box>
+      <Box width="80vw" height="60vh" target={'Alterar cores'}></Box>
     </Container>
   )
 }

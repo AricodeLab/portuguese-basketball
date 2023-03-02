@@ -6,7 +6,7 @@ function Shortcuts(): JSX.Element {
   return (
     <Container>
       <Content>
-        <Box width="1428px" height="700px"></Box>
+        <Box height="70vh"></Box>
       </Content>
     </Container>
   )

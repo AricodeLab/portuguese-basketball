@@ -40,7 +40,7 @@ export const Target = styled.div`
   }
 `
 
-function Box({ children, target, width, height }: BoxContentProps): JSX.Element {
+function Box({ children, target, width = '85vw', height = '60vh' }: BoxContentProps): JSX.Element {
   return (
     <ContentContainer>
       <BoxContent width={width} height={height}>
