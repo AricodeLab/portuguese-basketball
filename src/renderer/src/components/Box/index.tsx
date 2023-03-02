@@ -19,12 +19,12 @@ const BoxContent = styled.div<BoxContentProps>`
   justify-content: center;
 `
 
-const ButtonStyled = styled(Button).attrs({ type: 3 })``
+const Target = styled(Button).attrs({ type: 3 })``
 
 function Box({ children, target, width, height }: BoxContentProps): JSX.Element {
   return (
     <div>
-      <ButtonStyled>{target}</ButtonStyled>
+      <Target>{target}</Target>
       <BoxContent width={width} height={height}>
         {children}
       </BoxContent>

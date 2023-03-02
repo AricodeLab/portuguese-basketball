@@ -1,5 +1,5 @@
 appId: com.basket.app
-productName: teste
+productName: scoreboard
 directories:
   buildResources: build
 files:
@@ -30,8 +30,6 @@ dmg:
 linux:
   target:
     - AppImage
-    - snap
-    - deb
   maintainer: electronjs.org
   category: Utility
 appImage:
