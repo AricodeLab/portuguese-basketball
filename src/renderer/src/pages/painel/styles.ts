@@ -3,36 +3,13 @@ import { HTMLAttributes } from 'react'
 
 import styled, { css } from 'styled-components'
 
-export const Content = styled.div`
+export const Content = styled.form`
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: sans-serif;
-  h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 24px;
-  }
-  h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-    color: '#161614';
-  }
-  h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    color: '#000000';
-  }
 `
 
 interface CustomComp extends HTMLAttributes<HTMLDivElement> {
@@ -40,6 +17,7 @@ interface CustomComp extends HTMLAttributes<HTMLDivElement> {
   height?: string
   gap?: string
   flexDirection?: 'row' | 'column'
+  background?: string
 }
 
 export const Div = styled.div<CustomComp>`
@@ -48,6 +26,7 @@ export const Div = styled.div<CustomComp>`
   width: ${(props): string | undefined => props?.width};
   height: ${(props): string | undefined => props?.height};
   gap: ${(props): string | undefined => props?.gap};
+  background-color: ${(props): string | undefined => props?.background};
 `
 export const Row = styled.div<HTMLAttributes<HTMLDivElement>>`
   display: flex;
@@ -94,10 +73,26 @@ export const Triangle = styled.div<TriangleProps>`
     `}
 `
 
-export const Texto = styled.h2`
-  height: 25px;
+export const Textoh2 = styled.h2`
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: '#161614';
+`
+export const Textoh1 = styled.h1`
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+`
+export const Textoh3 = styled.h3`
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: '#000000';
 `
