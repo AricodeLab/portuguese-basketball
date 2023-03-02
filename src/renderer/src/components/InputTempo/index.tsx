@@ -1,4 +1,5 @@
 import { Div, Label, Triangle, Input } from './styles'
+
 type Props = {
   title: string
 }
@@ -6,6 +7,7 @@ type Props = {
 const InputTempo = ({ title }: Props): JSX.Element => {
   return (
     <Div flexDirection="row">
+      <p>eeeeeeeeeee</p>
       <Div flexDirection="column">
         <Label>{title}</Label>
         <Input></Input>
