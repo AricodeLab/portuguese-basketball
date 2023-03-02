@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 import styled from 'styled-components'
-import { ContentContainer } from '@renderer/components/Container/style'
 
-export const Content = styled(ContentContainer)`
+export const Content = styled.div`
+  margin: 38px 55px;
+  display: flex;
+  gap: 26px;
 `

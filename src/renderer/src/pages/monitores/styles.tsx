@@ -2,7 +2,8 @@ import styled from 'styled-components'
 
 export const Content = styled.div`
   display: flex;
-  flex-direction: row;
-  margin: 53px 40px;
-  gap: 44px;
+  margin-top: 107px;
+  margin-left: 55px;
+  justify-content: center;
+  align-items: center;
 `

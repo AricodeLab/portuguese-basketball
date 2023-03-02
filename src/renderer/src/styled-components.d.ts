@@ -11,6 +11,7 @@ declare module 'styled-components' {
       penis: string
       orange: string
       black: string
+      target_color: string
     }
     backgrounds: {
       light: string

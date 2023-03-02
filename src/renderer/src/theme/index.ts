@@ -9,7 +9,8 @@ const defaultTheme = {
     grey: shade(0.3, '#E1E1E6'),
     penis: shade(2, '#CAAF8D'),
     orange: '#D18421',
-    black: '#161614'
+    black: '#161614',
+    target_color: '#D49E6F'
   },
   backgrounds: {
     light: '#FFFFFF'

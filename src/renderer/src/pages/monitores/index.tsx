@@ -1,13 +1,15 @@
-import Container from '@renderer/components/Container'
 import Box from '@renderer/components/Box/'
+import { Content } from './styles'
+
 function Monitores(): JSX.Element {
   return (
-    <Container>
+    <Content>
       <Box target="Opções de ecrã" width="758px" height="334px">
-        {' '}
-        <form action=""></form>
+        <div>
+          <form action=""></form>
+        </div>
       </Box>
-    </Container>
+    </Content>
   )
 }
 

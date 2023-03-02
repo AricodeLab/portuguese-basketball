@@ -10,6 +10,8 @@ import FootBar from '@renderer/components/Footbar'
 import Equipas from '@renderer/pages/equipas'
 import Monitores from '@renderer/pages/monitores'
 import Midias from '@renderer/pages/midias'
+import Shortcuts from '@renderer/pages/shortcuts'
+import Cores from '@renderer/pages/cores'
 
 const Screen: React.FC = () => {
   return (
@@ -24,6 +26,8 @@ const Screen: React.FC = () => {
               <Route path="/Equipas" element={<Equipas />} />
               <Route path="/Monitores" element={<Monitores />} />
               <Route path="/Video/foto" element={<Midias />} />
+              <Route path="/Shortcuts" element={<Shortcuts />} />
+              <Route path="/Cores" element={<Cores />} />
             </Routes>
           </CurrentConnection>
         </Content>
