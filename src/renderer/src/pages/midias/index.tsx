@@ -1,11 +1,10 @@
-import Box from '@renderer/components/Box'
-import ContainerMain from '@renderer/components/Container/index'
+import { Container, Box } from '@renderer/components/'
 
 import { Content } from './style'
 
 function Midias(): JSX.Element {
   return (
-    <ContainerMain>
+    <Container>
       <Content>
         <Box target="Inicio de jogo" width="30vw" height="90vh">
           {/* <Button type={2}>Salvar</Button> */}
@@ -21,7 +20,7 @@ function Midias(): JSX.Element {
           {/* <Button type={2}>Importar</Button> */}
         </Box>
       </Content>
-    </ContainerMain>
+    </Container>
   )
 }
 

@@ -2,18 +2,19 @@ import React from 'react'
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import '../assets/index.css'
-import Header from '../components/Header/index'
-import Navbar from '../components/navbar'
+import { Header, Navbar } from '../components/'
+import {
+  Panel,
+  FootBar,
+  Monitores,
+  Midias,
+  Shortcuts,
+  Cores,
+  BannerColor,
+  Sons,
+  Equipas
+} from '@renderer/pages'
 import { Container, Content, CurrentConnection } from './styles'
-import Panel from '@renderer/pages/painel'
-import FootBar from '@renderer/components/Footbar'
-import Equipas from '@renderer/pages/equipas'
-import Monitores from '@renderer/pages/monitores'
-import Midias from '@renderer/pages/midias'
-import Shortcuts from '@renderer/pages/shortcuts'
-import Cores from '@renderer/pages/cores'
-import BannerColor from '@renderer/pages/banner-color'
-import Sons from '@renderer/pages/sons'
 
 const Screen: React.FC = () => {
   return (

@@ -1,10 +1,11 @@
-import Box from '@renderer/components/Box'
-import Container from '@renderer/components/Container'
+import { Container, Box } from '@renderer/components/'
 
 function BannerColor(): JSX.Element {
   return (
     <Container>
-      <Box width="90vw" height="70vh"></Box>
+      <Box width="90vw" height="70vh">
+        <div></div>
+      </Box>
     </Container>
   )
 }

@@ -15,7 +15,7 @@ const pages: pagesI[] = [
   { name: 'Shortcuts' },
   { name: 'Cores' },
   { name: 'Sons' },
-  { name: 'Banner-color' },
+  { name: 'Banner-color' }
 ]
 
 function Navbar(): JSX.Element {

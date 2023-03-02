@@ -1,11 +1,12 @@
 import React from 'react'
-import Container from '@renderer/components/Container'
-import Box from '@renderer/components/Box'
+import { Container, Box } from '@renderer/components/'
 
 function Cores(): JSX.Element {
   return (
     <Container>
-      <Box width="80vw" height="60vh" target={'Alterar cores'}></Box>
+      <Box width="80vw" height="60vh" target={'Alterar cores'}>
+        <div></div>
+      </Box>
     </Container>
   )
 }

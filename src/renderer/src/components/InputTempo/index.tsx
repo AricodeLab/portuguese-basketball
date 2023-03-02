@@ -3,7 +3,7 @@ type Props = {
   title: string
 }
 
-const index = ({ title }: Props): JSX.Element => {
+const InputTempo = ({ title }: Props): JSX.Element => {
   return (
     <Div flexDirection="row">
       <Div flexDirection="column">
@@ -18,4 +18,4 @@ const index = ({ title }: Props): JSX.Element => {
   )
 }
 
-export default index
+export default InputTempo

@@ -1,4 +1,4 @@
-import Box from '@renderer/components/Box/'
+import { Box } from '@renderer/components/'
 import { Content } from './styles'
 
 function Monitores(): JSX.Element {

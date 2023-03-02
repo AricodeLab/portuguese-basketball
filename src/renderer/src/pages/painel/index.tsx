@@ -1,9 +1,8 @@
-import Container from '@renderer/components/Container'
+import { Container, InputTempo } from '@renderer/components/'
 import { Content, Div, Row, Span, Triangle, Textoh2, Textoh1 } from './styles'
 import { useState } from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import { InputPainel } from '@renderer/types'
-import InputTempo from '@renderer/components/InputTempo'
 
 function Panel(): JSX.Element {
   const [tempoJogo, setTempoJogo] = useState('Crescente')
