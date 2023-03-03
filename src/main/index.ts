@@ -2,6 +2,7 @@ import { app, shell, BrowserWindow, nativeTheme, ipcMain } from 'electron'
 import { join } from 'path'
 import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import icon from '../../resources/icon.svg?asset'
+import store from './store'
 
 function createWindow(): void {
   // Create the browser window.
@@ -26,7 +27,17 @@ function createWindow(): void {
     shell.openExternal(details.url)
     return { action: 'deny' }
   })
+  ipcMain.on('toggle-theme', () => {
+    const currentTheme = store.get('userTheme')
 
+    if (currentTheme === 'light') {
+      store.set('usertheme', 'dark')
+    } else {
+      store.set('userTheme', 'light')
+    }
+  })
+
+  mainWindow.webContents.send('apply-theme', store.get('userTheme'))
   // HMR for renderer base on electron-vite cli.
   // Load the remote URL for development or the local html file for production.
   if (is.dev && process.env['ELECTRON_RENDERER_URL']) {

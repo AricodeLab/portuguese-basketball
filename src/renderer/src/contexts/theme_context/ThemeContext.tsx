@@ -1,5 +1,5 @@
-import React, { createContext, useState } from 'react'
-
+import React, { createContext, useEffect, useState } from 'react'
+import { ipcRenderer } from 'electron'
 interface ThemeContextProps {
   theme: 'dark' | 'light'
   toggleTheme: () => void
@@ -9,8 +9,14 @@ export const ThemeContext = createContext({} as ThemeContextProps)
 
 export function ThemeContextProvider({ children }: { children: React.ReactNode }): JSX.Element {
   const [theme, setTheme] = useState<'dark' | 'light'>('dark')
+  useEffect(() => {
+    ipcRenderer.on('apply-theme', (event, theme) => {
+      setTheme(theme)
+    })
+  }, [])
+
   const toggleTheme = (): void => {
-    //ainda pra implementar
+    ipcRenderer.send('toggle-theme')
   }
   return (
     <>
