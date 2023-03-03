@@ -1,6 +1,8 @@
 import { Content, Div } from './style'
-import Box from '../../Components/Box'
+
+import Box from '../../components/Box'
 import Form from './form'
+
 
 function Equipas(): JSX.Element {
   return (

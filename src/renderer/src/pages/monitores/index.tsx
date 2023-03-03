@@ -1,14 +1,20 @@
-import { Box } from '@renderer/components/'
-import { Content } from './styles'
+import { Box, InputRadius } from '@renderer/components/'
+import { Content, Div, DivLines } from './styles'
 
 function Monitores(): JSX.Element {
   return (
     <Content>
-      <Box target="Opções de ecrã" width="758px" height="334px">
-        <div>
-          <form action=""></form>
-        </div>
+      <Box target="Opções de ecrã">
+        <Div>
+          <DivLines>
+            <InputRadius title="Ecrã público" id={''} />
+            <InputRadius title="Ecrã tempo de ataque 1" id={''} />
+            <InputRadius title="Controle de Ecrã" id={''} />
+            <InputRadius title="Ecrã tempo de ataque 2" id={''} />
+          </DivLines>
+        </Div>
       </Box>
+      <InputRadius title="Mostrar ecrã banner" id={''} />
     </Content>
   )
 }
