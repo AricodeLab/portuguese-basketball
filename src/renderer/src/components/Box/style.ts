@@ -1,8 +1,24 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+import { HTMLAttributes } from 'react'
 import styled from 'styled-components'
 
-export const BoxContent = styled.div`
+interface CustomComp extends HTMLAttributes<HTMLDivElement> {
+  width?: string
+  height?: string
+  type?: 1 | 2 | 3
+}
+
+export const CustomBox = styled.div<CustomComp>`
   display: flex;
-  background-color: ${(props): string => props.theme.colors.whitegray};
+  background-color: ${(props) => {
+    switch (props.type) {
+      case 1:
+        return props.theme.colors.whitegray
+      case 2:
+        return props.theme.colors.brown
+    }
+  }};
   border-radius: 35px;
   align-items: center;
   text-align: center;

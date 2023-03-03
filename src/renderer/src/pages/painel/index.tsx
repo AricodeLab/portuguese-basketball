@@ -42,12 +42,12 @@ function Panel(): JSX.Element {
     <Container>
       <Content onSubmit={(): void => console.log(2)}>
         <Row>
-          <Div flexDirection="column">
+          <Div flexDirection="column" gap="1em">
             <Div
               height="auto"
               width="auto"
               flexDirection="row"
-              gap="59px"
+              gap="2em"
               onClick={(): void =>
                 tempoJogo == 'Crescente' ? setTempoJogo('Decrecente') : setTempoJogo('Crescente')
               }
@@ -58,24 +58,28 @@ function Panel(): JSX.Element {
                 <Triangle bgColor="#6C3D18" increment={tempoJogo == 'Crescente'} />
               </Span>
             </Div>
-            <Div height="auto" width="auto">
+            <Div height="auto" width="auto" gap="2em">
               <Textoh2>Tempo de jogo</Textoh2>
-              <InputTempo title="Minutos"></InputTempo>
-              <InputTempo title="Segundos"></InputTempo>
+              <Div>
+                <InputTempo title="Minutos"></InputTempo>
+                <InputTempo title="Segundos"></InputTempo>
+              </Div>
             </Div>
             <Div height="auto" width="auto">
               <Textoh2>Desconto de tempo 1</Textoh2>
-              <InputTempo title="Minutos"></InputTempo>
-              <InputTempo title="Segundos"></InputTempo>
+              <Div>
+                <InputTempo title="Minutos"></InputTempo>
+                <InputTempo title="Segundos"></InputTempo>
+              </Div>
             </Div>
-            <Div flexDirection="row">
+            <Div>
               <InputRadius list={listBuzina1} name="buzina1" />
               <InputTempo title="Minutos"></InputTempo>
               <InputTempo title="Segundos"></InputTempo>
             </Div>
             <Div height="auto" width="auto" flexDirection="column">
-              <Textoh2>Desconto de tempo 2</Textoh2>
               <Div flexDirection="row">
+                <Textoh2>Desconto de tempo 2</Textoh2>
                 <InputTempo title=""></InputTempo>
                 <InputTempo title=""></InputTempo>
               </Div>
