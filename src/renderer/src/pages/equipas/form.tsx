@@ -2,24 +2,26 @@
 import { Button } from '../../components/'
 import { Div, Header } from './style'
 import { useForm } from 'react-hook-form'
-import useFilePreview from '@renderer/hooks/useFilePreview'
 import { useEffect, useState } from 'react'
-import { fileURLToPath } from 'url'
 
 interface IFormInputs {
   file: File
 }
+
 function Form(): JSX.Element {
   const { register, watch } = useForm<IFormInputs>()
-
+  const [preview, setPreview] = useState<string>()
   const file = watch('file')
-  const [filepreviw, setFilepreviw] = useState<string | null>(null)
 
   useEffect(() => {
-    if (file && file[0]) {
-      setFilepreviw(file[0].path)
+    if (!file) {
+      return
     }
-    console.log(filepreviw)
+    console.log(file)
+    setPreview(URL.createObjectURL(file[0]))
+
+    // free memory when ever this component is unmounted
+    // return () => URL.revokeObjectURL(objectUrl)
   }, [file])
 
   return (
@@ -31,12 +33,19 @@ function Form(): JSX.Element {
       <div>
         <h1>Logo</h1>
         <input type="file" accept="images/*" id="file" {...register('file')} />
-        {filepreviw ? <img width="70px" height="50px" src={filepreviw} alt="preview" /> : null}
-        <button
-          onClick={() => {
-            console.log(filepreviw)
-          }}
-        ></button>
+        {preview && (
+          <img
+            width="70px"
+            height="50px"
+            onLoad={(e) => console.log(e)}
+            onError={() => {
+              console.log(preview)
+              setPreview(preview)
+            }}
+            src={preview}
+            alt="preview"
+          />
+        )}
       </div>
     </Div>
   )

@@ -10,7 +10,6 @@ function createWindow(): void {
     width: 950,
     height: 750,
     show: false,
-
     frame: false,
     autoHideMenuBar: true,
     ...(process.platform === 'linux' ? { icon } : { icon }),
@@ -21,8 +20,7 @@ function createWindow(): void {
       allowRunningInsecureContent: true,
       webviewTag: true,
       preload: join(__dirname, '../preload/index.js')
-    },
-
+    }
   })
 
   mainWindow.on('ready-to-show', () => {
