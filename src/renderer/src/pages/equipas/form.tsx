@@ -11,18 +11,14 @@ function Form(): JSX.Element {
   const { register, watch } = useForm<IFormInputs>()
 
   const file = watch('file')
-  const [filepreviw, setFilepreviw] = useState<string | null>(null)
+  const [filepreviw, setFilepreviw] = useState<File | null>(null)
 
   useEffect(() => {
     if (file && file[0]) {
-
-      const reader = new FileReader();
-
-      const newlink =URL.createObjectURL(file[0]);
-      setFilepreviw(newlink)
+      setFilepreviw(file[0])
     }
     console.log(filepreviw)
-  }, [file]);
+  }, [file])
 
   return (
     <Div>
@@ -33,8 +29,12 @@ function Form(): JSX.Element {
       <div>
         <h1>Logo</h1>
         <input type="file" id="file" {...register('file')} />
-
-        {filepreviw ? <img src={filepreviw} alt="preview" /> : null}
+        {filepreviw ? <img width="70" height="50" src={filepreviw.name} alt="preview" /> : null}
+        <button
+          onClick={() => {
+            console.log(filepreviw)
+          }}
+        ></button>
       </div>
     </Div>
   )
