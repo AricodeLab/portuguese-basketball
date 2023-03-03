@@ -2,11 +2,19 @@
 import styled from 'styled-components'
 
 export const Content = styled.div`
-  margin: 38px 55px;
+  max-width: 100%;
+  width: 100%;
   display: flex;
-  gap: 26px;
+  justify-content: space-evenly;
   @media (min-width: 1200px) {
-    margin: 15px auto;
-    gap: 10px;
+    padding: 10px;
   }
+  @media (min-width: 1400px) {
+    padding: 55px;
+  }
+`
+export const Div = styled.div`
+
+width: 1000px;
+height: 1000px;
 `
