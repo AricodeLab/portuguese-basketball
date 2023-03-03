@@ -1,27 +1,37 @@
 import { Input, Label, Div } from './styles'
-
-type radio = {
-  title: string
-  id: string
-}
-type Props = {
-  list: radio[]
-}
+import { radio } from '@renderer/types'
 import { useState } from 'react'
+type Props = {
+  list?: radio[]
+  name?: string
+  radio?: radio
+}
 
-const InputRadius = ({ title, id }: radio): JSX.Element => {
-  const [inputRadius, setInputRadius] = useState('')
-
-  const handleRadiusChange = (event): void => {
-    setInputRadius(event.target.value)
+const InputRadius = ({ list, name, radio }: Props): JSX.Element => {
+  if (radio) {
+    const [checked, setChecked] = useState(false)
+    return (
+      <Div flexDirection="row" onClick={(): void => setChecked((e) => !e)}>
+        <Input type="radio" id={radio.id} checked={checked} />
+        <Label htmlFor={radio.id}>{radio.title}</Label>
+      </Div>
+    )
   }
-
-  return (
-    <Div>
-      <Input type="radio" id={id} checked={true} />
-      <Label htmlFor={id}>{title}</Label>
-    </Div>
-  )
+  if (list) {
+    return (
+      <Div flexDirection="column">
+        {list.map(({ id, title }: radio) => {
+          return (
+            <Div key={id} flexDirection="row">
+              <Input type="radio" name={name} id={id} />
+              <Label htmlFor={id}>{title}</Label>
+            </Div>
+          )
+        })}
+      </Div>
+    )
+  }
+  return <></>
 }
 
 export default InputRadius

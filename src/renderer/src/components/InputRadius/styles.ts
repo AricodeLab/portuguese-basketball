@@ -9,10 +9,7 @@ interface CustomComp extends HTMLAttributes<HTMLDivElement> {
   flexDirection?: 'row' | 'column'
   background?: string
 }
-export const Input = styled.input`
-  outline: 2px solid #000000;
-  outline-radius: 30px;
-`
+export const Input = styled.input``
 export const Label = styled.label``
 export const Div = styled.div<CustomComp>`
   display: flex;
