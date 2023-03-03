@@ -1,8 +1,9 @@
-import { Container, InputTempo } from '@renderer/components/'
+import { Container, InputTempo,InputRadius } from '@renderer/components/'
 import { Content, Div, Row, Span, Triangle, Textoh2, Textoh1 } from './styles'
 import { useState } from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import { InputPainel } from '@renderer/types'
+
 
 function Panel(): JSX.Element {
   const [tempoJogo, setTempoJogo] = useState('Crescente')
@@ -36,12 +37,21 @@ function Panel(): JSX.Element {
             <Div height="auto" width="auto">
               <Textoh2>Tempo de jogo</Textoh2>
               <InputTempo title="Minutos"></InputTempo>
+              <InputTempo title="Segundos"></InputTempo>
             </Div>
             <Div height="auto" width="auto">
               <Textoh2>Desconto de tempo 1</Textoh2>
+              <InputTempo title="Minutos"></InputTempo>
+              <InputTempo title="Segundos"></InputTempo>
+            </Div>
+            <Div flexDirection="column">
+              <InputRadius title="Toque o buzina ao iniciar" id="test" />
+              <InputRadius title="Toque o buzina qaundo faltar" id="test2" />
             </Div>
             <Div height="auto" width="auto">
               <Textoh2>Desconto de tempo 2</Textoh2>
+              <InputTempo title=""></InputTempo>
+              <InputTempo title=""></InputTempo>
             </Div>
           </Div>
           <Div width="auto" flexDirection="column">
