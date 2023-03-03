@@ -5,6 +5,7 @@ export const Content = styled.div`
   max-width: 100%;
   width: 100%;
   display: flex;
+  position: relative;
   justify-content: space-evenly;
   @media (min-width: 1200px) {
     padding: 10px;
@@ -14,7 +15,11 @@ export const Content = styled.div`
   }
 `
 export const Div = styled.div`
+  width: 30rem;
+  height: 30rem;
+`
 
-width: 1000px;
-height: 1000px;
+export const Header = styled.div`
+  display: flex;
+  justify-content: flex-end;
 `
