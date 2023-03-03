@@ -7,14 +7,14 @@ function Monitores(): JSX.Element {
       <Box target="Opções de ecrã">
         <Div>
           <DivLines>
-            <InputRadius title="Ecrã público" id={''} />
-            <InputRadius title="Ecrã tempo de ataque 1" id={''} />
-            <InputRadius title="Controle de Ecrã" id={''} />
-            <InputRadius title="Ecrã tempo de ataque 2" id={''} />
+            <InputRadius radio={{ title: 'Ecrã público', id: '' }} />
+            <InputRadius radio={{ title: 'Ecrã tempo de ataque 1', id: '' }} />
+            <InputRadius radio={{ title: 'Controle de Ecrã', id: '' }} />
+            <InputRadius radio={{ title: 'Ecrã tempo de ataque 2', id: '' }} />
           </DivLines>
         </Div>
       </Box>
-      <InputRadius title="Mostrar ecrã banner" id={''} />
+      <InputRadius radio={{ title: 'Mostrar ecrã banner', id: '' }} />
     </Content>
   )
 }
