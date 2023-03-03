@@ -1,17 +1,16 @@
-import { BoxContent, Target } from './style'
+import { CustomBox, Target } from './style'
 
 type Props = {
   children: JSX.Element | JSX.Element[]
   target: string
+  type?: 1 | 2 | 3
 }
-function Box({ children, target }: Props): JSX.Element {
+function Box({ children, target, type }: Props): JSX.Element {
   return (
-    <BoxContent>
-      <>
-        <Target>{target}</Target>
-        {children}
-      </>
-    </BoxContent>
+    <CustomBox type={type}>
+      <Target>{target}</Target>
+      {children}
+    </CustomBox>
   )
 }
 
