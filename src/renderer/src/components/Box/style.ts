@@ -11,6 +11,9 @@ export const BoxContent = styled.div`
 `
 
 export const Target = styled.div`
+  :hover {
+    cursor: pointer;
+  }
   position: absolute;
   top: 0;
   left: 0;
