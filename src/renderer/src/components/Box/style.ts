@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 import { HTMLAttributes } from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 interface CustomComp extends HTMLAttributes<HTMLDivElement> {
   width?: string
@@ -15,6 +15,8 @@ export const CustomBox = styled.div<CustomComp>`
     switch (props.type) {
       case 1:
         return props.theme.colors.whitegray
+      case 2:
+        return props.theme.colors.brown
     }
   }};
   border-radius: 35px;
