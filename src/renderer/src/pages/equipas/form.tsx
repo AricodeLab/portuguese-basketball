@@ -2,7 +2,7 @@ import { Button } from '../../components/'
 import { Div, H1, Header, Info } from './style'
 import Players from './players'
 import SelectImg from './selectImg'
-import { Input } from '@renderer/Components/Input/style'
+import { InputCircle } from '@renderer/components/'
 
 function Form(): JSX.Element {
   return (
@@ -16,7 +16,7 @@ function Form(): JSX.Element {
         <SelectImg />
         <H1>Nome</H1>
         <div style={{ alignSelf: 'center' }}>
-          <Input type="text" />
+          <InputCircle type="text" />
         </div>
       </Info>
       <Players />

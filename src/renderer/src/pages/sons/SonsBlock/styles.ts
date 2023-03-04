@@ -9,11 +9,21 @@ interface CustomComp extends HTMLAttributes<HTMLDivElement> {
 export const Div = styled.div<CustomComp>`
   display: flex;
   justify-content: center;
-  width: min-content;
   align-items: center;
   flex-direction: ${(props): string | undefined => props?.flexDirection};
 `
+export const BotoesDiv = styled.div<CustomComp>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 10%;
+  flex-direction: ${(props): string | undefined => props?.flexDirection};
+`
+export const Container = styled.div<CustomComp>`
+  display: flex;
+  justify-content: center;
+  max-width: 1px;
+`
 export const Texto = styled.p`
   font-size: 0.7em;
-  padding-left: 0%;
 `

@@ -1,5 +1,6 @@
-import { Container, Box, SonsBlock } from '@renderer/components/'
+import { Container, Box } from '@renderer/components/'
 import { MainDiv, Content } from './styles'
+import SonsBlock from './SonsBlock'
 const ContentBlocks1: Array<string> = ['Horn', 'Buzzer', 'Fim de Tempo']
 const ContentBlocks2: Array<string> = [
   'inicio do desconto de tempo',

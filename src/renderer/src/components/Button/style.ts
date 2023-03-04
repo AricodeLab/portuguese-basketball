@@ -16,6 +16,7 @@ export const CustonButton = styled.button<Props>`
   :hover {
     cursor: pointer;
   }
+
 `
 export const CustonButton2 = styled.button`
   background: none;
