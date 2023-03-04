@@ -1,10 +1,14 @@
 import { Container, Box } from '@renderer/components/'
-
+import { MainDiv, Content } from './styles'
 function Sons(): JSX.Element {
   return (
     <Container>
-      <Box width="80vw" height="60vh" target="Alterar sons">
-        <></>
+      <Box target="Alterar sons" type={1}>
+        <MainDiv width="70vw" height="50vh">
+          <Content></Content>
+
+          <Content></Content>
+        </MainDiv>
       </Box>
     </Container>
   )

@@ -31,6 +31,7 @@ export function useWindowSize({ watch = true }: UseWindowSizeOptions): WindowSiz
         window.removeEventListener('resize', handleResize)
       }
     }
+    return
   }, [watch])
 
   return windowSize
