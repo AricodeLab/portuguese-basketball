@@ -1,4 +1,4 @@
-import { Container, Box } from '@renderer/components/'
+import { Container, Box, Button, MediaItem } from '@renderer/components/'
 
 import { Content } from './style'
 
@@ -6,18 +6,32 @@ function Midias(): JSX.Element {
   return (
     <Container>
       <Content>
-        <Box target="Inicio de jogo" width="30vw" height="90vh">
-          {/* <Button type={2}>Salvar</Button> */}
-          {/* <Button type={2}>Importar</Button> */}
+        <Box target="Inicio de jogo" type={1}>
+          <div className="content">
+            <MediaItem />
+          </div>
+          <div className="buttonContent">
+            <Button type={2}>Salvar</Button>
+            <Button type={2}>Importar</Button>
+          </div>
         </Box>
-        <Box target="Intervalo" width="30vw" height="90vh">
-          {/* <Button type={2}>Salvar</Button> */}
-          {/* <Button type={2}>Importar</Button> */}
+        <Box target="Intervalo" type={1}>
+          <div className="content">
+            <MediaItem />
+          </div>
+          <div className="buttonContent">
+            <Button type={2}>Salvar</Button>
+            <Button type={2}>Importar</Button>
+          </div>
         </Box>
-        <Box target="Desconto de tempo" width="30vw" height="90vh">
-          {' '}
-          {/* <Button type={2}>Salvar</Button> */}
-          {/* <Button type={2}>Importar</Button> */}
+        <Box target="Desconto de tempo" type={1}>
+          <div className="content">
+            <MediaItem />
+          </div>
+          <div className="buttonContent">
+            <Button type={2}>Salvar</Button>
+            <Button type={2}>Importar</Button>
+          </div>
         </Box>
       </Content>
     </Container>
