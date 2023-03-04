@@ -14,6 +14,7 @@ export function ThemeContextProvider({ children }: { children: React.ReactNode }
 
   const toggleTheme = (): void => {
     //ipcRenderer.send('toggle-theme')
+    setTheme('light')
   }
   return (
     <>

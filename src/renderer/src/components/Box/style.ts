@@ -17,6 +17,8 @@ export const CustomBox = styled.div<CustomComp>`
         return props.theme.colors.whitegray
       case 2:
         return props.theme.colors.brown
+      default:
+        return props.theme.colors.brown
     }
   }};
   border-radius: 35px;
