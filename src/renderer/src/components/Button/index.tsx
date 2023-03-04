@@ -1,4 +1,4 @@
-import { CustomText, CustonButton } from './style'
+import { CustomText, CustonButton, CustonButton2 } from './style'
 
 type Props = {
   children?: string | JSX.Element
@@ -21,9 +21,9 @@ function Button({ children, type }: Props): JSX.Element {
       )
     case 3:
       return (
-        <CustonButton primaly>
+        <CustonButton2>
           <CustomText>{children}</CustomText>
-        </CustonButton>
+        </CustonButton2>
       )
     case 4:
       return <CustonButton primaly>{children}</CustonButton>

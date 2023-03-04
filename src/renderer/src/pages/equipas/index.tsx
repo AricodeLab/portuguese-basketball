@@ -1,7 +1,9 @@
-import { Content, Div } from './style'
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+import { Content } from './style'
 
 import Box from '../../components/Box'
 import Form from './form'
+import SelectImg from './selectImg'
 
 function Equipas(): JSX.Element {
   return (
@@ -9,7 +11,9 @@ function Equipas(): JSX.Element {
       <Box target="Equipa 1" type={1}>
         <Form />
       </Box>
-
+      <div style={{ alignSelf: 'flex-end' }}>
+        <SelectImg />
+      </div>
       <Box target="Equipa 2" type={1}>
         <Form />
       </Box>
