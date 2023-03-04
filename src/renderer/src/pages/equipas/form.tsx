@@ -1,52 +1,25 @@
-/* eslint-disable @typescript-eslint/explicit-function-return-type */
 import { Button } from '../../components/'
-import { Div, Header } from './style'
-import { useForm } from 'react-hook-form'
-import { useEffect, useState } from 'react'
-
-interface IFormInputs {
-  file: File
-}
+import { Div, H1, Header, Info } from './style'
+import Players from './players'
+import SelectImg from './selectImg'
+import { Input } from '@renderer/Components/Input/style'
 
 function Form(): JSX.Element {
-  const { register, watch } = useForm<IFormInputs>()
-  const [preview, setPreview] = useState<string>()
-  const file = watch('file')
-
-  useEffect(() => {
-    if (!file) {
-      return
-    }
-    console.log(file)
-    setPreview(URL.createObjectURL(file[0]))
-
-    // free memory when ever this component is unmounted
-    // return () => URL.revokeObjectURL(objectUrl)
-  }, [file])
-
   return (
     <Div>
       <Header>
         <Button type={3}>Salvar</Button>
         <Button type={3}>Importar</Button>
       </Header>
-      <div>
-        <h1>Logo</h1>
-        <input type="file" accept="images/*" id="file" {...register('file')} />
-        {preview && (
-          <img
-            width="70px"
-            height="50px"
-            onLoad={(e) => console.log(e)}
-            onError={() => {
-              console.log(preview)
-              setPreview(preview)
-            }}
-            src={preview}
-            alt="preview"
-          />
-        )}
-      </div>
+      <Info>
+        <H1>Logo</H1>
+        <SelectImg />
+        <H1>Nome</H1>
+        <div style={{ alignSelf: 'center' }}>
+          <Input type="text" />
+        </div>
+      </Info>
+      <Players />
     </Div>
   )
 }
