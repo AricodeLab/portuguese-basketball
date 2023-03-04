@@ -1,7 +1,7 @@
 import { CustomText, CustonButton } from './style'
 
 type Props = {
-  children?: string
+  children?: string | JSX.Element
   type: number
 }
 
@@ -25,6 +25,8 @@ function Button({ children, type }: Props): JSX.Element {
           <CustomText>{children}</CustomText>
         </CustonButton>
       )
+    case 4:
+      return <CustonButton primaly>{children}</CustonButton>
     default:
       return (
         <CustonButton primaly>

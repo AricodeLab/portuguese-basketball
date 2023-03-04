@@ -13,6 +13,9 @@ export const CustonButton = styled.button<Props>`
   margin-left: 15px;
   margin-top: 3px;
   color: ${(props) => (props.primaly ? props.theme.colors.white : props.theme.colors.black)};
+  :hover {
+    cursor: pointer;
+  }
 `
 
 export const CustomText = styled.h1`
