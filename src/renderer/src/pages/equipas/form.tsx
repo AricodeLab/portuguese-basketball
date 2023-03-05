@@ -2,7 +2,7 @@ import { Button } from '../../components/'
 import { Div, H1, Header, Info, Nsei } from './style'
 import Players from './players'
 import SelectImg from './selectImg'
-import { InputCircle } from '@renderer/Components/style'
+import { InputCircle } from '@renderer/components/style'
 
 function Form(): JSX.Element {
   return (

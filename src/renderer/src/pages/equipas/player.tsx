@@ -1,4 +1,4 @@
-import { InputCircle } from '@renderer/Components/style'
+import { InputCircle } from '@renderer/components/style'
 import SelectImg from './selectImg'
 import { Divinput, ImageD, Nsei, PlayerDiv } from './style'
 
