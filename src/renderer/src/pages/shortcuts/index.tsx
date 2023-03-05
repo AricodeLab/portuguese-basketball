@@ -1,6 +1,6 @@
 import { Box, Container } from '@renderer/components/'
 import ShortCutsButtons from './shortCutsButtons'
-import { Content, MainDiv } from './style'
+import { MainDiv } from './style'
 import GayPorn from './GayPorn.interface'
 interface ListaGayPorn {
   key: string
@@ -133,25 +133,19 @@ function Shortcuts(): JSX.Element {
     <Container>
       <MainDiv>
         <Box target="Time 1" type={1}>
-          <Content flexDirection="column">
-            {BotoesContent1.map(({ key, lista }) => {
-              return <ShortCutsButtons key={key} buttons={lista} />
-            })}
-          </Content>
+          {BotoesContent1.map(({ key, lista }) => {
+            return <ShortCutsButtons key={key} buttons={lista} />
+          })}
         </Box>
         <Box target={'Time 2'} type={1}>
-          <Content>
-            {BotoesContent2.map(({ key, lista }) => {
-              return <ShortCutsButtons key={key} buttons={lista} />
-            })}
-          </Content>
+          {BotoesContent2.map(({ key, lista }) => {
+            return <ShortCutsButtons key={key} buttons={lista} />
+          })}
         </Box>
         <Box target="" type={1}>
-          <Content>
-            {BotoesContent3.map(({ key, lista }) => {
-              return <ShortCutsButtons key={key} buttons={lista} />
-            })}
-          </Content>
+          {BotoesContent3.map(({ key, lista }) => {
+            return <ShortCutsButtons key={key} buttons={lista} />
+          })}
         </Box>
       </MainDiv>
     </Container>

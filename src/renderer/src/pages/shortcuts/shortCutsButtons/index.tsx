@@ -1,4 +1,4 @@
-import { MainDiv, BotoesDiv } from './style'
+import { MainDiv, BotoesDiv, TextoName, XTexto, Input } from './style'
 import GayPorn from '../GayPorn.interface'
 import { ChangeEvent, useState } from 'react'
 import { Box } from '@renderer/components'
@@ -19,14 +19,13 @@ const ShortCutsButtons = ({ buttons }: Props): JSX.Element => {
 
         return (
           <BotoesDiv key={key}>
-            <Box type={3} target="">
-              <div>{name}</div>
-            </Box>
-            <Box type={3} target="">
-              <input value={inputValue} onChange={changeHandle} />
+            <Box type={1} target="">
+              <TextoName>{name}</TextoName>
             </Box>
 
-            <div>x</div>
+            <Input value={inputValue} onChange={changeHandle} />
+
+            <XTexto>x</XTexto>
           </BotoesDiv>
         )
       })}

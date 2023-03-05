@@ -12,6 +12,7 @@ declare module 'styled-components' {
       orange: string
       black: string
       target_color: string
+      bege: string
     }
     backgrounds: {
       light: string
