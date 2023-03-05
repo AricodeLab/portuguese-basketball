@@ -18,10 +18,17 @@ export const CustomBox = styled.div<CustomComp>`
       case 2:
         return props.theme.colors.brown
       default:
-        return props.theme.colors.brown
+        return props.theme.colors.whitegray
     }
   }};
-  border-radius: 35px;
+  border-radius: ${(props) => {
+    switch (props.type) {
+      case 3:
+        return undefined
+      default:
+        return '35px'
+    }
+  }};
   align-items: center;
   text-align: center;
   justify-content: center;
@@ -36,6 +43,9 @@ export const Target = styled.div`
   top: 0;
   left: 0;
   background: ${(props): string => props.theme.colors.target_color};
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
   border-radius: 35px;
   border: 0;
   padding: 1px 20px;

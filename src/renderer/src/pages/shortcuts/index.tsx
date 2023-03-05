@@ -1,13 +1,20 @@
 import { Box, Container } from '@renderer/components/'
-import { Content } from './style'
+
+import { Content, MainDiv } from './style'
 function Shortcuts(): JSX.Element {
   return (
     <Container>
-      <Content>
-        <Box height="70vh">
-          <></>
+      <MainDiv>
+        <Box target="Time 1" type={1}>
+          <Content></Content>
         </Box>
-      </Content>
+        <Box target={'Time 2'} type={1}>
+          <Content></Content>
+        </Box>
+        <Box target="" type={1}>
+          <Content></Content>
+        </Box>
+      </MainDiv>
     </Container>
   )
 }
