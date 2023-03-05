@@ -4,8 +4,6 @@ import { HTMLAttributes } from 'react'
 import styled from 'styled-components'
 
 interface CustomComp extends HTMLAttributes<HTMLDivElement> {
-  width?: string
-  height?: string
   type?: 1 | 2 | 3
 }
 
@@ -18,7 +16,7 @@ export const CustomBox = styled.div<CustomComp>`
       case 2:
         return props.theme.colors.brown
       default:
-        return props.theme.colors.whitegray
+        return props.theme.colors.orange
     }
   }};
   border-radius: ${(props) => {

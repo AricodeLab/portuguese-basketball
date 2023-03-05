@@ -2,8 +2,14 @@ import styled from 'styled-components'
 
 export const MainDiv = styled.div`
   display: flex;
-  width: 78vw;
-  height: 24em;
+  flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+`
+
+export const BotoesDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 `
