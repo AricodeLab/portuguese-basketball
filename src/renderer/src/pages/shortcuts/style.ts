@@ -10,11 +10,13 @@ interface CustomComp extends HTMLAttributes<HTMLDivElement> {
 }
 export const MainDiv = styled.div`
   display: flex;
-  width: 80vw;
-  height: 20em;
+  width: 78vw;
+  height: 24em;
   justify-content: center;
   align-items: flex-start;
   > div {
+    width: 100%;
+    height: 100%;
     border-radius: 0;
   }
   > div:first-child {
@@ -31,8 +33,8 @@ export const Content = styled.div<CustomComp>`
   justify-content: space-evenly;
   align-items: center;
   flex-direction: ${(props): string | undefined => props?.flexDirection};
-  width: 10rem;
-  height: 10rem;
+  width: 100%;
+  height: 100%;
   background-color: ${(props) => {
     switch (props.type) {
       case 1:
