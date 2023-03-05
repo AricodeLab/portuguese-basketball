@@ -16,26 +16,39 @@ export const Content = styled.div`
 `
 export const Div = styled.div`
   padding: 2rem;
-  width: 30vw;
+  width: 35vw;
   height: 60vh;
 `
 
-
 export const PlayerDiv = styled.div`
-  border: 3px solid ${(props) => props.theme.colors.brown};
-  border-radius: 20px;
-  width: 6rem;
-  height: 5rem;
+  display: flex;
+  border-bottom: 3px solid ${(props) => props.theme.colors.brown};
 `
 export const Foto = styled.div`
   border: 3px solid ${(props) => props.theme.colors.brown};
   border-radius: 20px;
-  width: 6rem;
+  width: 100%;
   height: 5rem;
+`
+
+export const Nsei = styled.div`
+  align-items: center;
+  flex-wrap: wrap;
+  display: flex;
+  padding: 0.5rem;
+`
+export const Divinput = styled.div`
+  height: min-content;
+  display: flex;
+`
+export const ImageD = styled.div`
+  width: 20%;
+  padding: 0.5rem;
 `
 export const Img = styled.img`
   width: 100%;
   height: 100%;
+  border-radius: 20px;
 `
 export const H1 = styled.h1`
   margin-right: 5px;
@@ -60,7 +73,6 @@ export const TextB = styled.p`
   border-radius: 35px;
   border: 3px solid ${(props) => props.theme.colors.brown};
   padding: 0.2em 1.7em;
-  margin-left: 15px;
   color: ${(props) => props.theme.colors.black};
 `
 export const DivPlayers = styled.div`
@@ -74,22 +86,4 @@ export const DivPlayers = styled.div`
   color: ${(props) => props.theme.colors.black};
   align-content: center;
 `
-export const Scroll = styled.div`
-  width: 98%;
-  height: 90%;
 
-  overflow-y: scroll;
-  &::-webkit-scrollbar {
-    width: 12px;
-  }
-  &::-webkit-scrollbar-track {
-    border: 3px solid #a46a37;
-    border-radius: 20px;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: ${(props) => props.theme.colors.brown};
-    border-radius: 20px;
-    padding: 10px;
-    margin: 10px;
-  }
-`

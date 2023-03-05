@@ -1,5 +1,6 @@
+import { Scroll } from '@renderer/Components/Scroll/style'
 import Player from './player'
-import { DivPlayers, Scroll } from './style'
+import { DivPlayers } from './style'
 
 const players = Array.from({ length: 17 }, (_, index) => index + 1)
 
@@ -8,7 +9,7 @@ function Players(): JSX.Element {
     <DivPlayers>
       <Scroll>
         {players.map((n) => {
-          return <Player key={n}></Player>
+          return <Player key={n} />
         })}
       </Scroll>
     </DivPlayers>

@@ -1,8 +1,8 @@
 import { Button } from '../../components/'
-import { Div, H1, Header, Info } from './style'
+import { Div, H1, Header, Info, Nsei } from './style'
 import Players from './players'
 import SelectImg from './selectImg'
-import { InputCircle } from '@renderer/components/'
+import { InputCircle } from '../../components/'
 
 function Form(): JSX.Element {
   return (
@@ -13,12 +13,19 @@ function Form(): JSX.Element {
       </Header>
       <Info>
         <H1>Logo</H1>
-        <SelectImg />
+        <div style={{ display: 'flex', width: '10rem' }}>
+          <SelectImg />
+        </div>
+
         <H1>Nome</H1>
         <div style={{ alignSelf: 'center' }}>
-          <InputCircle type="text" />
-          <InputCircle type="text" />
+          <Nsei>
+            <InputCircle type="text" />
+          </Nsei>
 
+          <Nsei>
+            <InputCircle type="text" />
+          </Nsei>
         </div>
       </Info>
       <Players />
