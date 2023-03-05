@@ -17,6 +17,8 @@ function Form(): JSX.Element {
         <H1>Nome</H1>
         <div style={{ alignSelf: 'center' }}>
           <InputCircle type="text" />
+          <InputCircle type="text" />
+
         </div>
       </Info>
       <Players />

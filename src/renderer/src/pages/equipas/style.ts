@@ -20,6 +20,13 @@ export const Div = styled.div`
   height: 60vh;
 `
 
+
+export const PlayerDiv = styled.div`
+  border: 3px solid ${(props) => props.theme.colors.brown};
+  border-radius: 20px;
+  width: 6rem;
+  height: 5rem;
+`
 export const Foto = styled.div`
   border: 3px solid ${(props) => props.theme.colors.brown};
   border-radius: 20px;

@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 import { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { Foto, Img, TextB } from './style'
-
+import { v4 as uuidv4 } from 'uuid'
 interface IFormInputs {
   file: File
 }
@@ -10,7 +11,7 @@ function SelectImg(): JSX.Element {
   const { register, watch } = useForm<IFormInputs>()
   const [preview, setPreview] = useState<string>('')
   const file = watch('file')
-
+  const id = uuidv4()
   useEffect(() => {
     if (!file) {
       return
@@ -37,13 +38,13 @@ function SelectImg(): JSX.Element {
         )}
       </Foto>
       <div style={{ marginRight: '1rem', alignSelf: 'center' }}>
-        <label htmlFor="file">
+        <label htmlFor={id}>
           <TextB>Importar</TextB>
           <input
             style={{ display: 'NONE' }}
             type="file"
             accept="images/*"
-            id="file"
+            id={id}
             {...register('file')}
           />
         </label>
