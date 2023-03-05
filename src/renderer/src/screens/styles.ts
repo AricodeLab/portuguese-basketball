@@ -3,10 +3,10 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   background: ${(props) => props.theme.backgrounds.light};
-
   width: 100%;
   height: 100%;
   max-width: 100vw;
+  max-height: 100vh;
   display: flex;
   flex-direction: column;
 `
