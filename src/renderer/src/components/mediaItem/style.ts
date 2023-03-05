@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Content = styled.div`
   flex-direction: row;
   width: 100%;
-
+  border-bottom: 1px solid #98692c;
   .item {
     display: flex;
     flex-direction: row;
@@ -18,14 +18,19 @@ export const Content = styled.div`
     border-color: #98692c;
     border-radius: 2px;
     border-style: solid;
+    border-width: 1px;
   }
-  button.close {
+  button.close,
+  .btnMedia {
     background: none;
     border: none;
     color: red;
     font-size: 20px;
     cursor: pointer;
     font-weight: bold;
+  }
+  .btnMedia {
+    color: #00f;
   }
   .play {
     display: inline-block;
@@ -49,7 +54,12 @@ export const Content = styled.div`
   }
 
   .time {
-    border: 2px solid #98692c;
+    border: 1px solid #98692c;
     padding: 2px;
+  }
+  .mediaInfo {
+    width: 100%;
+    font-size: 12px;
+    border: 1px solid #98692c;
   }
 `

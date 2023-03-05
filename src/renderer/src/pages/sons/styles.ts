@@ -34,11 +34,11 @@ interface ContentInterface extends HTMLAttributes<HTMLDivElement> {
 }
 export const Content = styled.div<ContentInterface>`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  width: 20%;
-  height: 50%;
+  width: 40%;
+  height: 70%;
   background-color: ${(props) => {
     switch (props.type) {
       case 1:
