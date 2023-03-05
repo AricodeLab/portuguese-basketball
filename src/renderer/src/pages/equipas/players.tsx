@@ -1,4 +1,4 @@
-import { Scroll } from '@renderer/components/Scroll/style'
+import { Scroll } from '@renderer/Components/style'
 import Player from './player'
 import { DivPlayers } from './style'
 
