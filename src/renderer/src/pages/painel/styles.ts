@@ -22,7 +22,6 @@ interface CustomComp extends HTMLAttributes<HTMLDivElement> {
 
 export const Div = styled.div<CustomComp>`
   display: flex;
-  justify-content: center;
   flex-direction: ${(props): string | undefined => props?.flexDirection};
   width: ${(props): string | undefined => props?.width};
   height: ${(props): string | undefined => props?.height};
