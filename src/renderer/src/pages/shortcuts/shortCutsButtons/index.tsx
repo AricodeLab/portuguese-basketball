@@ -13,8 +13,8 @@ const ShortCutsButtons = ({ buttons }: Props): JSX.Element => {
         const [inputValue, setValue] = useState<string>(defaultValue)
 
         const changeHandle = ({ target }: ChangeEvent<HTMLInputElement>): void => {
-          console.log(`${key} : ${target.value}`)
-          setValue(target.value)
+          //console.log(`${key} : ${target.value}`)
+          setValue(target.value.toUpperCase())
         }
 
         return (
@@ -25,7 +25,7 @@ const ShortCutsButtons = ({ buttons }: Props): JSX.Element => {
 
             <Input value={inputValue} onChange={changeHandle} />
 
-            <XTexto>x</XTexto>
+            <XTexto onClick={(): void => setValue('')}>x</XTexto>
           </BotoesDiv>
         )
       })}

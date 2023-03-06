@@ -2,8 +2,8 @@ import styled from 'styled-components'
 
 export const MainDiv = styled.div`
   display: flex;
-  width: 78vw;
-  height: 24em;
+  width: 80vw;
+  height: 27em;
   justify-content: center;
 
   align-items: flex-start;

@@ -5,7 +5,8 @@ export const MainDiv = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background-color: ${(props): string => props.theme.colors.whitegray};
+  background: ${(props): string => props.theme.colors.bege};
+  border-radius: 20px;
 `
 
 export const BotoesDiv = styled.div`
@@ -13,9 +14,8 @@ export const BotoesDiv = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-bottom: 1rem;
   > div {
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: ${(props): string => props.theme.colors.orange};
   }
   > div:first-child {
@@ -52,4 +52,5 @@ export const Input = styled.input`
 export const XTexto = styled.p`
   flex: 1;
   color: ${(props): string => props.theme.backgrounds.light};
+  max-width: 20%;
 `
