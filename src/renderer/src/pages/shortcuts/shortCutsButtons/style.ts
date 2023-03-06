@@ -50,7 +50,14 @@ export const Input = styled.input`
   border-radius: 5px;
 `
 export const XTexto = styled.p`
-  flex: 1;
   color: ${(props): string => props.theme.backgrounds.light};
   max-width: 20%;
+`
+export const XDiv = styled.div`
+  max-height: 45%;
+  display: flex;
+  background-color: red;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
 `
