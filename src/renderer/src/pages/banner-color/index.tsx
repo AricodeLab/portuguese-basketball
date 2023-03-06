@@ -3,7 +3,7 @@ import { Container, Box, InputColor, Button, InputRadius } from '@renderer/compo
 import { Content, DivLines, GridContainer } from './style'
 // import { useForm } from 'react-hook-form'
 import { useEffect } from 'react'
-import Data from './data.json'
+import Data from './Data'
 // muda pra lib
 const GenerateId = (): string => {
   return Math.floor(Math.random() * 777).toString()
