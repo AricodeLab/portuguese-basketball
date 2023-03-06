@@ -11,7 +11,7 @@ function Equipas(): JSX.Element {
       <Box target="Equipa 1" type={1}>
         <Form />
       </Box>
-      <div style={{ alignSelf: 'flex-end' }}>
+      <div style={{ alignSelf: 'flex-end', width: '10%' }}>
         <SelectImg />
       </div>
       <Box target="Equipa 2" type={1}>

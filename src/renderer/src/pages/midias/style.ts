@@ -15,13 +15,34 @@ export const Content = styled.div`
     gap: 10px;
     margin: 35px auto;
   }
+  .relativeBox {
+    position: relative;
+    display: flex;
+    width: 90%;
+  }
   .content {
     min-height: 300px;
+   max-height: 300px;
     margin-top: 30px;
-    width: 90%;
+    width: 100%;
+    flex-shrink: 0;
     border: 1px solid #7a4500;
     border-radius: 10px;
+    overflow-x: hidden;
+    div{
+      overflow-x: hidden;
+    }
   }
-  .buttonContent {
-  }
+
+ .addMediaItem{
+  position: absolute;
+  top:0;
+  right: 0;
+  font-size: 32px;
+  font-weight: bold;
+  background-color: #00000001;
+  border: none;
+  color: blue;
+
+ }
 `

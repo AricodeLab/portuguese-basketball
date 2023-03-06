@@ -56,10 +56,19 @@ export const Content = styled.div`
   .time {
     border: 1px solid #98692c;
     padding: 2px;
+    position: relative;
+    width: 30%;
+    background-color: #00000001;
+    font-size: 12px;
+    text-align: center;
   }
+ 
   .mediaInfo {
     width: 100%;
     font-size: 12px;
     border: 1px solid #98692c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `

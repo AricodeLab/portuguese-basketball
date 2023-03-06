@@ -1,4 +1,5 @@
-import { Button, InputCircle } from '@renderer/components'
+import { Button } from '@renderer/components'
+import { InputCircle } from '@renderer/components'
 import { BotoesDiv, Container, Div, DivInput, DivTitle, Texto, Title } from './styles'
 
 type Props = {
