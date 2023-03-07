@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 export const GridContainer = styled.div`
-  width: 70vw;
-  height: 70vh;
+  width: 60vw;
+  height: 50vh;
   padding: 20px;
   display: grid;
   margin: auto;
@@ -18,6 +18,9 @@ export const GridBox = styled.div`
   height: auto;
   gap: 20px;
   justify-content: center;
+  > div {
+    background: ${(props): string => props.theme.colors.bege};
+  }
 `
 
 export const GridRow = styled.div`

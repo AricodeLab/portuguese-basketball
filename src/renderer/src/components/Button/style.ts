@@ -24,6 +24,9 @@ export const CustonButton2 = styled.button`
   padding: 0.2em 1.7em;
   margin-left: 15px;
   color: ${(props) => props.theme.colors.black};
+  :hover {
+    cursor: pointer;
+  }
 `
 export const CustonButton3 = styled.button<Props>`
   background: ${(props) =>

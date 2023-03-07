@@ -1,6 +1,7 @@
-import React from 'react'
 import { Container, Box } from '@renderer/components/'
 import { GridBox, GridContainer, GridRow } from './style'
+import { CoresContent1, CoresContent2, CoresContent3 } from './Data'
+import CoresBotoes from './CoresBotoes'
 function Cores(): JSX.Element {
   return (
     <Container>
@@ -8,14 +9,24 @@ function Cores(): JSX.Element {
         <GridContainer>
           <GridBox>
             <Box target={''} type={2}>
-              <GridRow></GridRow>
+              {CoresContent1.map(({ title }) => {
+                return <CoresBotoes key={title} title={title} />
+              })}
             </Box>
           </GridBox>
           <GridBox>
-            <GridRow></GridRow>
+            <GridRow>
+              {CoresContent2.map(({ title }) => {
+                return <CoresBotoes key={title} title={title} />
+              })}
+            </GridRow>
           </GridBox>
           <GridBox>
-            <GridRow></GridRow>
+            <GridRow>
+              {CoresContent1.map(({ title }) => {
+                return <CoresBotoes key={title} title={title} />
+              })}
+            </GridRow>
           </GridBox>
         </GridContainer>
       </Box>
