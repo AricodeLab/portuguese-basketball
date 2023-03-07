@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 
 export const GridRow = styled.div`
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   display: flex;
   flex-direction: row;
   width: auto;
