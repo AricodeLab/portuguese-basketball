@@ -1,14 +1,16 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Container, Box, InputColor, Button, InputRadius } from '@renderer/components/'
 import { Content, DivLines, GridContainer } from './style'
-// import { useForm } from 'react-hook-form'
+
 import Data from './Data'
-// muda pra lib
+
 import { v4 as uuidv4 } from 'uuid'
 import bannerColor from './bannerColor.interface'
+import { useContext } from 'react'
+import { FormContext } from '@renderer/contexts/FormContext/FormContext'
 
 function BannerColor(): JSX.Element {
-  // const { register, watch } = useForm()
+  const { register } = useContext(FormContext)
 
   return (
     <Container>
@@ -28,7 +30,7 @@ function BannerColor(): JSX.Element {
                     <DivLines flexDirection="row">
                       {item?.withCheck ? <InputRadius radio={{ id: id, title: '' }} /> : null}
                       <DivLines className="input-area" flexDirection="row">
-                        <InputColor id={id} value={item.defaultValue} />
+                        <InputColor id={id} value={item.defaultValue} {...register('colors')} />
                         <label htmlFor={id}>
                           <Button type={3}>Alterar</Button>
                         </label>
