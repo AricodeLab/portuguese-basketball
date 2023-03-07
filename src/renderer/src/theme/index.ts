@@ -15,6 +15,19 @@ const defaultTheme = {
   },
   backgrounds: {
     light: '#FFFFFF'
+  },
+  banners: {
+    preto: '#000000',
+    cinsa: '#CFA8A8',
+    verdeClaro: '#00FF85',
+    azul: '#0057FF',
+    vermelhoEscuro: '#9F1D1D',
+    tijolo: '#B54E4E',
+    amarelho: '#DBFF00',
+    cinsaEscuro: '#554343',
+    verdeEscuro: '#46B62A',
+    marromEscuro: '#3D2626',
+    azulClaro: '#43CABA'
   }
 }
 export default defaultTheme

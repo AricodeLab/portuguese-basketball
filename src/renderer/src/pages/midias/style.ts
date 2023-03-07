@@ -22,27 +22,26 @@ export const Content = styled.div`
   }
   .content {
     min-height: 300px;
-   max-height: 300px;
+    max-height: 300px;
     margin-top: 30px;
     width: 100%;
     flex-shrink: 0;
     border: 1px solid #7a4500;
     border-radius: 10px;
     overflow-x: hidden;
-    div{
+    div {
       overflow-x: hidden;
     }
   }
 
- .addMediaItem{
-  position: absolute;
-  top:0;
-  right: 0;
-  font-size: 32px;
-  font-weight: bold;
-  background-color: #00000001;
-  border: none;
-  color: blue;
-
- }
+  .addMediaItem {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 32px;
+    font-weight: bold;
+    background-color: #00000001;
+    border: none;
+    color: blue;
+  }
 `

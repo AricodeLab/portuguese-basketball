@@ -5,6 +5,7 @@ import { Content, DivLines, GridContainer } from './style'
 import Data from './Data'
 // muda pra lib
 import { v4 as uuidv4 } from 'uuid'
+import bannerColor from './bannerColor.interface'
 
 function BannerColor(): JSX.Element {
   // const { register, watch } = useForm()
@@ -14,7 +15,7 @@ function BannerColor(): JSX.Element {
       <Box type={1} target="">
         <Content>
           <GridContainer>
-            {Data.map((item) => {
+            {Data.map((item: bannerColor) => {
               const id = uuidv4()
 
               return (
@@ -27,7 +28,7 @@ function BannerColor(): JSX.Element {
                     <DivLines flexDirection="row">
                       {item?.withCheck ? <InputRadius radio={{ id: id, title: '' }} /> : null}
                       <DivLines className="input-area" flexDirection="row">
-                        <InputColor id={id} />
+                        <InputColor id={id} value={item.defaultValue} />
                         <label htmlFor={id}>
                           <Button type={3}>Alterar</Button>
                         </label>

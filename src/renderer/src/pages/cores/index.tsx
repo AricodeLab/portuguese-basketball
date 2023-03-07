@@ -1,5 +1,5 @@
 import { Container, Box } from '@renderer/components/'
-import { GridBox, GridContainer } from './style'
+import { GridContainer } from './style'
 import { CoresContent1, CoresContent2, CoresContent3 } from './Data'
 import CoresBotoes from './CoresBotoes'
 function Cores(): JSX.Element {
