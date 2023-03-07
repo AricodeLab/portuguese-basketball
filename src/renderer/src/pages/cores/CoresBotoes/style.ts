@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const GridRow = styled.div`
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   display: flex;
@@ -16,6 +15,9 @@ export const Texto = styled.p`
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 0.8rem;
+`
+
+export const ButtonDiv = styled.div`
+  width: 110px;
 `

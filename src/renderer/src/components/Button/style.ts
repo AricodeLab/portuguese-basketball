@@ -37,6 +37,8 @@ export const CustonButton3 = styled.button<Props>`
   :hover {
     cursor: pointer;
   }
+  text-align: center;
+  vertical-align: middle;
 `
 export const CustomText = styled.h1`
   font-size: 100%;

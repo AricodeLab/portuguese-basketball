@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const MainDiv = styled.div`
   display: flex;
   width: 80vw;
+  max-width: 1200px;
   height: 27em;
   justify-content: center;
 

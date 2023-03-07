@@ -11,7 +11,7 @@ function Sons(): JSX.Element {
   return (
     <Container>
       <Box target="Alterar sons" type={1}>
-        <MainDiv width="75rem" height="50vh">
+        <MainDiv width="80vw" height="50vh">
           <Content>
             {ContentBlocks1.map((title) => {
               return <SonsBlock key={title} title={title} />

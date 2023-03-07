@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
 export const GridContainer = styled.div`
-  width: 60vw;
+  width: 80vw;
+  max-width: 1200px;
   height: 50vh;
   padding: 20px;
   display: grid;
@@ -11,6 +12,7 @@ export const GridContainer = styled.div`
   gap: 10px;
   > div {
     flex-direction: column;
+    justify-content: flex-start;
   }
 `
 
