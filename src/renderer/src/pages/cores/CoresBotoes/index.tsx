@@ -1,12 +1,20 @@
 import { Button, InputColor } from '@renderer/components'
 import CoresGrid from '../CoresGrid.interface'
-import { GridRow } from './style'
+import { GridRow, Texto } from './style'
+import { useRef } from 'react'
 const CoresBotoes = ({ title }: CoresGrid): JSX.Element => {
+  const colorInputRef = useRef<HTMLInputElement>(null)
+
+  const handleButtonClick = (): void => {
+    colorInputRef.current?.click()
+  }
   return (
     <GridRow>
-      <h2>{title}</h2>
-      <InputColor />
-      <Button type={3}>Alterar</Button>
+      <Texto>{title}</Texto>
+      <InputColor ref={colorInputRef} />
+      <Button onClick={handleButtonClick} type={3}>
+        Alterar
+      </Button>
     </GridRow>
   )
 }
