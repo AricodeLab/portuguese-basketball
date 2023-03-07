@@ -4,7 +4,7 @@ import { HTMLAttributes } from 'react'
 import styled from 'styled-components'
 
 interface CustomComp extends HTMLAttributes<HTMLDivElement> {
-  type?: 1 | 2 | 3
+  type?: 1 | 2 | 3 | 4
 }
 
 export const CustomBox = styled.div<CustomComp>`
@@ -31,6 +31,8 @@ export const CustomBox = styled.div<CustomComp>`
   text-align: center;
   justify-content: center;
   position: relative;
+  background: ${(props): string | undefined =>
+    props.type === 4 ? props.theme.colors.bege : undefined};
 `
 
 export const Target = styled.div`
