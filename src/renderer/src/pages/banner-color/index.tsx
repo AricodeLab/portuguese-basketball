@@ -1,15 +1,27 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { Container, Box, InputColor, Button, InputRadius } from '../../components/'
-import { Content, DivLines, GridContainer } from './style'
 
+import { Container, Box, InputColor, Button, InputRadius } from '../../components/'
+
+import { Content, DivLines, GridContainer } from './style'
+import { formatObjectKeys } from '@renderer/utils/ObjectFormater'
 import Data from './Data'
 
 import { v4 as uuidv4 } from 'uuid'
 import bannerColor from './bannerColor.interface'
+
 import { useFormContext } from 'react-hook-form'
+import { useState } from 'react'
 
 function BannerColor(): JSX.Element {
   const { register } = useFormContext()
+
+  const [bannerColors, setBannerColors] = useState<Record<string, string>>({})
+
+  const handleRegister = (name: string) => {
+    setBannerColors((prev) => formatObjectKeys({ ...prev, [name]: '' }))
+  }
+
 
   return (
     <Container>
@@ -18,6 +30,7 @@ function BannerColor(): JSX.Element {
           <GridContainer>
             {Data.map((item: bannerColor) => {
               const id = uuidv4()
+              const name = `bannerColors.${item.title}`
 
               return (
                 <DivLines
@@ -31,12 +44,27 @@ function BannerColor(): JSX.Element {
                       <DivLines className="input-area" flexDirection="row">
                         <InputColor
                           id={id}
+<<<<<<< HEAD
                           type="color"
                           value={item.defaultValue}
                           {...register('colors')}
                         />
+=======
+                          value={item.defaultValue}
+                          {...register(name)}
+                          onChange={(e) => console.log(e.target.value)}
+                        />
+
+>>>>>>> 3f52873073bb5d732ce61d9423e71425d101ca16
                         <label htmlFor={id}>
-                          <Button type={3}>Alterar</Button>
+                          <Button
+                            type={3}
+                            onClick={() => {
+                              handleRegister(name)
+                            }}
+                          >
+                            Alterar
+                          </Button>
                         </label>
                       </DivLines>
                     </DivLines>

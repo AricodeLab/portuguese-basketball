@@ -62,6 +62,9 @@ export const Input = styled.input<CustomComp>`
     outline: none !important;
   }
   text-align: center;
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
 `
 export const Label = styled.label`
   margin: auto;

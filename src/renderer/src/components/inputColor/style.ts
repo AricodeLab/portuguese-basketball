@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const InputColor = styled.input.attrs({ type: 'color' })`
+const InputColor = styled.input`
   -webkit-appearance: none;
   border: transparent;
   background-color: transparent;

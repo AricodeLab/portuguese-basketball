@@ -15,10 +15,8 @@ export const Content = styled.div`
   }
   button {
     background-color: #00000001;
-    border-color: #98692c;
-    border-radius: 2px;
-    border-style: solid;
-    border-width: 1px;
+    border: none;
+    border-color: none;
   }
   button.close,
   .btnMedia {
@@ -54,7 +52,8 @@ export const Content = styled.div`
   }
 
   .time {
-    border: 1px solid #98692c;
+    border-radius: 20px;
+    border: 3px solid ${(props): string | undefined => props.theme.colors.brown};
     padding: 2px;
     position: relative;
     width: 30%;
@@ -62,11 +61,13 @@ export const Content = styled.div`
     font-size: 12px;
     text-align: center;
   }
- 
+
   .mediaInfo {
     width: 100%;
+
     font-size: 12px;
-    border: 1px solid #98692c;
+    border-radius: 20px;
+    border: 3px solid ${(props): string | undefined => props.theme.colors.brown};
     display: flex;
     justify-content: center;
     align-items: center;

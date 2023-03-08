@@ -5,6 +5,7 @@ type Props = {
   children?: string | JSX.Element
   type: number
 }
+// eslint-disable-next-line @typescript-eslint/no-empty-function
 
 function Button({ onClick, children, type }: Props): JSX.Element {
   switch (type) {
