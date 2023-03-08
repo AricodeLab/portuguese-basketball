@@ -22,7 +22,6 @@ function BannerColor(): JSX.Element {
     setBannerColors((prev) => formatObjectKeys({ ...prev, [name]: '' }))
   }
 
-
   return (
     <Container>
       <Box type={1} target="">
@@ -43,19 +42,10 @@ function BannerColor(): JSX.Element {
                       {item?.withCheck ? <InputRadius radio={{ id: id, title: '' }} /> : null}
                       <DivLines className="input-area" flexDirection="row">
                         <InputColor
-                          id={id}
-<<<<<<< HEAD
-                          type="color"
-                          value={item.defaultValue}
-                          {...register('colors')}
-                        />
-=======
                           value={item.defaultValue}
                           {...register(name)}
                           onChange={(e) => console.log(e.target.value)}
                         />
-
->>>>>>> 3f52873073bb5d732ce61d9423e71425d101ca16
                         <label htmlFor={id}>
                           <Button
                             type={3}
