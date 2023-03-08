@@ -42,6 +42,7 @@ function BannerColor(): JSX.Element {
                       {item?.withCheck ? <InputRadius radio={{ id: id, title: '' }} /> : null}
                       <DivLines className="input-area" flexDirection="row">
                         <InputColor
+                          type="color"
                           value={item.defaultValue}
                           {...register(name)}
                           onChange={(e) => console.log(e.target.value)}

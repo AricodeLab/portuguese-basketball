@@ -1,5 +1,5 @@
-import { MediaItem } from '@renderer/components'
-import { Scroll } from '@renderer/components/style'
+import MediaItem from '../../components/mediaItem'
+import { Scroll } from '../../components/style'
 import { useState } from 'react'
 
 function Form(): JSX.Element {
