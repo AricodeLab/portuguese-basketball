@@ -22,11 +22,13 @@
     "@electron-toolkit/utils": "^1.0.2",
     "@electron/remote": "^2.0.9",
     "@types/styled-components": "^5.1.26",
+    "cron": "^2.2.0",
     "electron-store": "^8.1.0",
     "electron-updater": "^5.3.0",
     "react-hook-form": "^7.43.3",
     "react-router-dom": "^6.8.2",
-    "uuid": "^9.0.0"
+    "uuid": "^9.0.0",
+    "zod": "^3.21.4"
   },
   "devDependencies": {
     "@electron-toolkit/tsconfig": "^1.0.1",
