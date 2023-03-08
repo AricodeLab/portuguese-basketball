@@ -1,10 +1,8 @@
-import { FormContext } from '@renderer/contexts/FormContext/FormContext'
-import { useContext } from 'react'
 import Button from '../Button'
 import { Div } from './style'
-
+import { useFormContext } from 'react-hook-form'
 const FootBar = (): JSX.Element => {
-  const { handleSubmit } = useContext(FormContext)
+  const { handleSubmit } = useFormContext()
   return (
     <footer>
       <Div>

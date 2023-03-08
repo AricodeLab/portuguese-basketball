@@ -1,4 +1,4 @@
-import { Container, InputTempo, InputRadius } from '@renderer/components/'
+import { Container, InputTempo, InputRadius } from '../../components'
 import { Content, Div, Row, Span, Triangle, Textoh2, Textoh1 } from './styles'
 import { useState } from 'react'
 // import { useForm, SubmitHandler } from 'react-hook-form'

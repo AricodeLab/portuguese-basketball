@@ -1,6 +1,6 @@
 import { InputCircle } from '@renderer/components/style'
 import SelectImg from './selectImg'
-import { Divinput, ImageD, Nsei, PlayerDiv } from './style'
+import { Divinput, ImageD, N, Nsei, PlayerDiv } from './style'
 
 function Player(): JSX.Element {
   return (
@@ -11,7 +11,9 @@ function Player(): JSX.Element {
       <Nsei>
         <Divinput>
           <Nsei>
-            <InputCircle />
+            <N>
+              <InputCircle />
+            </N>
           </Nsei>
           <Nsei>
             <InputCircle />

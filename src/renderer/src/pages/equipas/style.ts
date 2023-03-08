@@ -32,6 +32,7 @@ export const Foto = styled.div`
 `
 
 export const Nsei = styled.div`
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   display: flex;
@@ -87,3 +88,6 @@ export const DivPlayers = styled.div`
   align-content: center;
 `
 
+export const N = styled.div`
+  width: 40%;
+`

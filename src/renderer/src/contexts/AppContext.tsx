@@ -1,15 +1,18 @@
+import defaultTheme from '@renderer/theme'
 import React, { createContext } from 'react'
-import FormContextProvider from './FormContext/FormContext'
-import { ThemeContextProvider } from './theme_context/ThemeContext'
+import { ThemeProvider } from 'styled-components'
+import { FormProvider, useForm } from 'react-hook-form'
 
 export const AppContext = createContext({})
 
 export function AppContextProvider({ children }: { children: React.ReactNode }): JSX.Element {
+  const methods = useForm()
+  const onSubmit = (data: object): void => console.log(data)
   return (
     <AppContext.Provider value={{}}>
-      <FormContextProvider>
-        <ThemeContextProvider>{children}</ThemeContextProvider>
-      </FormContextProvider>
+      <FormProvider {...methods}>
+        <ThemeProvider theme={defaultTheme}> {children}</ThemeProvider>
+      </FormProvider>
     </AppContext.Provider>
   )
 }
