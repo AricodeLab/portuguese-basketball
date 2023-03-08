@@ -3,7 +3,7 @@
 
 import { Container, Box, InputColor, Button, InputRadius } from '../../components/'
 
-import { Content, DivLines, GridContainer } from './style'
+import { Btn, Content, DivLines, GridContainer } from './style'
 import { formatObjectKeys } from '@renderer/utils/ObjectFormater'
 import Data from './Data'
 
@@ -48,14 +48,13 @@ function BannerColor(): JSX.Element {
                           onChange={(e) => console.log(e.target.value)}
                         />
                         <label htmlFor={id}>
-                          <Button
-                            type={3}
+                          <button
                             onClick={() => {
                               handleRegister(name)
                             }}
                           >
                             Alterar
-                          </Button>
+                          </button>
                         </label>
                       </DivLines>
                     </DivLines>

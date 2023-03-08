@@ -38,3 +38,14 @@ export const DivLines = styled.div<DivLineProps>`
     grid-area: input;
   }
 `
+export const Btn = styled.button`
+  background: none;
+  border-radius: 35px;
+  border: 3px solid ${(props) => props.theme.colors.brown};
+  padding: 0.2em 1.7em;
+  margin-left: 15px;
+  color: ${(props) => props.theme.colors.black};
+  :hover {
+    cursor: pointer;
+  }
+`
